@@ -1,11 +1,9 @@
-Projeto indivdual
-
 <p align="center">
     <img 
       src="https://i.imgur.com/TGYUW3s.png"
       alt="logo fire on wheels" 
-      width="250" 
-      height="256"
+      width="450" 
+      height="456"
     />
 </p>
 
