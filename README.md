@@ -2,7 +2,7 @@ Projeto indivdual
 
 <p align="center">
     <img 
-      src="https://imgur.com/UqLULWX"
+      src="https://i.imgur.com/UqLULWX.png"
       alt="logo fire on wheels" 
       width="250" 
       height="256"
