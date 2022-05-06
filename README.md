@@ -3,7 +3,7 @@
       src="https://i.imgur.com/TI1YVGV.png"
       alt="logo fire on wheels" 
       width="550" 
-      height="456"
+      height="556"
     />
 </p>
 
