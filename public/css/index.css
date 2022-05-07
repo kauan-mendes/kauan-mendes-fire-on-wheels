@@ -1,29 +1,46 @@
+/* Configuração do banner */
 body{
 margin: 0;
 padding: 0;
 height: 100vh;
 width: 100vw;
-background: linear-gradient(72deg, #f4fc55 1%, #b1362a 99%);
+background: linear-gradient(72deg, #1464b5 10%, #bcdeec 99%);
 }
+
+.imgindex1{
+    width: 100%;
+    height: 480px;
+    
+    
+}
+/* palheta de cores
+#1464b5
+#bcdeec
+#1a61a8
+#212837 */
+
 /* Configuração Navbar */
 nav {
-    padding: 0 20px;
+    
     display: flex;
     justify-content: space-between;
-    border: 2px solid black;
-    height: 100px;
-    background: linear-gradient(72deg, #ecd031 1%, #c02416 99%);   
+    width: 100%;     
+    margin: 0;  
+    padding: 0;   
+    color: rgb(225,225,225);     
+    text-decoration: none;
+    background: linear-gradient(72deg, #1464b5 10%, #bcdeec 99%);   
 }
-.logo{
-    background-image: url(https://i.imgur.com/qP4vvRp.png);
-    width: 300px;
-    height: 270px;
+/* .logo{
+    background-image: url(https://i.imgur.com/zF2n36w.png);
+    width: 200px;
+    height: 127px;
     position: absolute;
-    /* border: 2px solid black; */
-    background-size: 100%;
-    margin-top: -5.80%;
+    border: 2px solid black;
+    background-size: 98%;
+    top: -1.60%;
     
-      }
+      } */
 h1, a {
     color: white;
     text-decoration: none;
@@ -61,36 +78,35 @@ ul {
 
 /* Configuração carrossel */
 .content{
-height: 520px;
-width: 935px;
+height: 420px;
+width: 800px;
 border-radius: 20px;
 overflow: hidden;
-position: absolute;
-top: 80%;
-left: 50%;
-transform: translate(-50%, -50%);
+margin-left: 20%;
+margin-top: 20%;
+
 }
 
 .navigation{
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%);
     display: flex;
+    padding-top: 29%;
+    padding-left: 7%;
 }
 
 .bar{
     height: 17px;
     width: 70px;
-    border: 2px solid black;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
     margin: 6px;
     cursor: pointer;
     transition: .3s;
+    background-color: #1464b5;
 }
 
 .bar:hover{
-    background-color: black;
+    background-color: #82bbf4;
 }
 
 input{
@@ -99,7 +115,7 @@ input{
 
 .slides{
     display: flex;
-    width: 700%;
+    width: 715%;
     height: 100%;
 }
 
@@ -137,3 +153,41 @@ margin-left: -70%;
 margin-left: -84%;
 }
 /* Fim carrossel */
+
+
+
+
+
+/* .banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner video {
+    
+    top: 10%;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+  }
+  .banner .content {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .banner .content h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 5.5em;
+    text-transform: uppercase;
+    color: #ffff;
+  }
+  .banner .content p {
+    font-size: 1.5em;
+    color: #ffff;
+  } */
