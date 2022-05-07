@@ -2,8 +2,8 @@
     <img 
       src="https://i.imgur.com/zF2n36w.png"
       alt="logo fire on wheels" 
-      width="550" 
-      height="556"
+      width="250" 
+      height="156"
     />
 </p>
 
