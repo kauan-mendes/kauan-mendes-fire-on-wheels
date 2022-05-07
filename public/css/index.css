@@ -1,0 +1,139 @@
+body{
+margin: 0;
+padding: 0;
+height: 100vh;
+width: 100vw;
+background: linear-gradient(72deg, #f4fc55 1%, #b1362a 99%);
+}
+/* Configuração Navbar */
+nav {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    height: 100px;
+    background: linear-gradient(72deg, #ecd031 1%, #c02416 99%);   
+}
+.logo{
+    background-image: url(https://i.imgur.com/qP4vvRp.png);
+    width: 300px;
+    height: 270px;
+    position: absolute;
+    /* border: 2px solid black; */
+    background-size: 100%;
+    margin-top: -5.80%;
+    
+      }
+h1, a {
+    color: white;
+    text-decoration: none;
+    
+}
+nav ul {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+li {
+    padding: 0 25px;
+    transition: .4s;
+}
+li:hover, .h1:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgba(255, 0, 0, 0.773);
+    border-radius: 5px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+/* fim navbar */
+
+
+
+
+/* Configuração carrossel */
+.content{
+height: 520px;
+width: 935px;
+border-radius: 20px;
+overflow: hidden;
+position: absolute;
+top: 80%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.bar{
+    height: 17px;
+    width: 70px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.bar:hover{
+    background-color: black;
+}
+
+input{
+    display: none;
+}
+
+.slides{
+    display: flex;
+    width: 700%;
+    height: 100%;
+}
+
+.slide{
+    width: 14%;
+    transition: .5s;
+}
+
+.slide img{
+width: 100%;
+height: 100%;
+
+}
+
+#slide1:checked ~ .s1{
+margin-left: 0;
+}
+
+#slide2:checked ~ .s1{
+margin-left: -14%;
+}
+#slide3:checked ~ .s1{
+margin-left: -28%;
+}
+#slide4:checked ~ .s1{
+margin-left: -42%;
+}
+#slide5:checked ~ .s1{
+margin-left: -56%;
+}
+#slide6:checked ~ .s1{
+margin-left: -70%;
+}
+#slide7:checked ~ .s1{
+margin-left: -84%;
+}
+/* Fim carrossel */
