@@ -1,3 +1,9 @@
+/* palheta de cores
+#1464b5
+#bcdeec
+#1a61a8
+#212837 */
+
 /* Configuração do banner */
 body{
 margin: 0;
@@ -9,19 +15,16 @@ background: linear-gradient(72deg, #1464b5 10%, #bcdeec 99%);
 
 .imgindex1{
     width: 100%;
-    height: 480px;
-    
-    
+    height: 460px;  
 }
-/* palheta de cores
-#1464b5
-#bcdeec
-#1a61a8
-#212837 */
 
+p{
+    position: absolute;
+    font-size: 20px;
+    color: aliceblue;
+}
 /* Configuração Navbar */
 nav {
-    
     display: flex;
     justify-content: space-between;
     width: 100%;     
