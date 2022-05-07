@@ -1,6 +1,6 @@
 <p align="center">
     <img 
-      src="https://i.imgur.com/TI1YVGV.png"
+      src="https://i.imgur.com/zF2n36w.png"
       alt="logo fire on wheels" 
       width="550" 
       height="556"
