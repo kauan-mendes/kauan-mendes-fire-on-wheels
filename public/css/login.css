@@ -1,44 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap');
-body{
+
+body {
     margin: 0;
-    background: linear-gradient(72deg, #710d06 10%, #ff1919 99%); 
-       
-        font-family: 'Noto Sans', sans-serif;
-       
-    }
+    background: linear-gradient(72deg, #710d06 10%, #ff1919 99%);
+
+    font-family: 'Noto Sans', sans-serif;
+
+}
 
 nav {
     display: flex;
     justify-content: space-between;
-    width: 100%;     
-    margin: 0;  
-    padding: 0;   
-    color: rgb(225,225,225);     
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: rgb(225, 225, 225);
     text-decoration: none;
-    background: linear-gradient(72deg, #710d06 10%, #ff1919 99%); 
+    background: linear-gradient(72deg, #710d06 10%, #ff1919 99%);
 }
 
-h1, a {
+h1,
+a {
     color: white;
-    text-decoration: none;   
+    text-decoration: none;
 }
+
 nav ul {
     align-items: center;
     list-style: none;
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
 }
 
 li {
     padding: 0 25px;
     transition: .4s;
 }
-li:hover, .h1:hover {
+
+li:hover,
+.h1:hover {
     cursor: pointer;
     opacity: 0.8;
     background-color: #4c238097;
     border-radius: 5px;
 }
+
 ul {
     list-style: none;
     padding: 0;
@@ -46,18 +52,18 @@ ul {
     transition: all .5s;
 }
 
-.mainlogin{
+.mainlogin {
     width: 100%;
     height: 100vh;
     display: flex;
-    background: linear-gradient(72deg, #201b2c 10%, #302152 99%); 
+    background: linear-gradient(72deg, #201b2c 10%, #302152 99%);
     justify-content: center;
     align-items: center;
-    
-    
+
+
 }
 
-.divesquerda{
+.divesquerda {
     width: 50vw;
     height: 100vh;
     display: flex;
@@ -67,27 +73,29 @@ ul {
 }
 
 
-.divesquerda h1{
-    font-size: 1.8vw;
+.divesquerda h1 {
+    font-size: 1.9vw;
     color: #ff0000c5;
     margin-left: 8%;
 }
-.imgdivesquerda{
+
+.imgdivesquerda {
     width: 30vw;
     margin-left: 8%;
     margin-top: -5%;
 
 }
-.divdireita{
-width: 50vw;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center; 
-margin-right: 6%;
+
+.divdireita {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6%;
 }
-    
-.cardlogin{
+
+.cardlogin {
     width: 60%;
     display: flex;
     justify-content: center;
@@ -101,13 +109,13 @@ margin-right: 6%;
     box-shadow: 8px 8px 32px 20px rgba(0, 0, 0, 0.427);
 }
 
-.cardlogin h1{
+.cardlogin h1 {
     color: #ff1919;
     font-weight: 800;
     margin: 0;
 }
 
-.textfield{
+.textfield {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -116,7 +124,7 @@ margin-right: 6%;
     margin: 17px 0px;
 }
 
-.textfield input{
+.textfield input {
     width: 100%;
     border: none;
     border-radius: 10px;
@@ -128,18 +136,31 @@ margin-right: 6%;
     box-shadow: 8px 8px 32px 20px rgba(0, 0, 0, 0.427);
     outline: none;
     box-sizing: border-box;
+    border-bottom: 2px solid #da150b;
+    padding-left: 32px;
+}
+.signup-text:hover {
+    text-decoration: underline;
 }
 
-.textfield label{
+.textfield i {
+    position: absolute;
+    transform: translateY(40%);
+    color: rgb(142, 30, 30);
+    font-size: 23px; 
+}
+
+.textfield label {
     color: #f0ffffde;
     margin-bottom: 10px;
 }
 
-.textfield input::placeholder{
+.textfield input::placeholder {
     color: #f0ffff94;
+       
 }
 
-.btnlogin{
+.btnlogin {
     width: 100%;
     padding: 16px 0px;
     margin: 25px;
@@ -156,8 +177,45 @@ margin-right: 6%;
     transition: .6s;
 
 }
-.btnlogin:hover{
+
+.btnlogin:hover {
     opacity: 0.8;
     background-color: #302152;
     border-radius: 5px;
+}
+
+
+
+
+/* footer */
+.footer {
+    margin: none;
+    background: linear-gradient(72deg, #710d06 10%, #ff1919 99%);
+    height: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.footermini1 {
+    margin-top: 2%;
+    border-right: #000000 solid 2px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6%;
+    margin-bottom: 2%;
+
+}
+
+.footermini2 {
+
+    margin-left: 10%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
