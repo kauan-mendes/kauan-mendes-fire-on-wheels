@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap');
+
+body {
+    margin: 0;
+    background-image: linear-gradient(
+        to right,
+        #1d043d 0%,
+        #14031d 51%,
+        #0f0120 100%
+      );
+
+    font-family: 'Noto Sans', sans-serif;
+
+}
+.agora{
+    background: linear-gradient(72deg, #201b2c 10%, #302152 99%);
+}
+body::-webkit-scrollbar {
+    width: 1rem; 
+  }
+  
+  /* cor de fundo do scroll */
+  body::-webkit-scrollbar-track {
+    background: #201b2c; 
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(72deg, #710d06 10%, #ff1919 99%);
+    border-radius: 6px; /* roundness of the scroll thumb */
+    border: 1px solid #e5e5e5;
+  }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: rgb(225, 225, 225);
+    text-decoration: none;
+    background-image: linear-gradient(
+    to right,
+    #710d06 0%,
+    #ff1919 51%,
+    #3d176e97 100%
+  );
+}
+
+h1,
+a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 8px;
+}
+
+nav ul {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    padding: 0 25px;
+    transition: .4s;
+}
+
+li:hover,
+.h1:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: #3d176e97;
+    border-radius: 5px;
+    
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.maincadastro {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+     background-image: linear-gradient(
+      to right,
+      #1d043d 0%,
+      #14031d 51%,
+      #0f0120 100%
+    );
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+
+
+}
+
+
+
+.divdireita {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6%;
+}
+
+.cardcadastro {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 40.6);
+    background: rgba(255, 255, 255, 0.114);
+    box-shadow: 8px 8px 22px 20px rgba(0, 0, 0, 0.427);
+    
+    
+    
+}
+.endorg{
+    
+    display: flex;
+    
+}
+.endorg input{
+padding: 0px 20px;
+}
+
+.cardcadastro h1 {
+    color: #ff1919;
+    font-weight: 800;
+    margin: 0;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 17px 0px;
+}
+
+.textfield input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: #514869;
+    padding: 15px;
+    color: #f0ffffde;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 40.6);
+    background: rgba(255, 255, 255, 0.114);
+    box-shadow: 8px 8px 32px 20px rgba(0, 0, 0, 0.427);
+    outline: none;
+    box-sizing: border-box;
+    border-bottom: 2px solid #da150b;
+    padding-left: 32px;
+}
+.signup-text:hover {
+    text-decoration: underline;
+}
+
+.textfield i {
+    position: absolute;
+    transform: translateY(40%);
+    color: rgb(142, 30, 30);
+    font-size: 23px; 
+}
+
+.textfield label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield input::placeholder {
+    color: #f0ffff94;
+       
+}
+
+.btncadastro {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 9px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: white;
+    background-color: #ff1919;
+    box-shadow: 0px 10px 40px -12px #710d06;
+    transition: .6s;
+
+}
+
+.btncadastro:hover {
+    opacity: 0.8;
+    background-color: #302152;
+    border-radius: 5px;
+}
+
+
+
+
+/* footer */
+.footer {
+    margin: none;
+    background: linear-gradient(72deg, #710d06 10%, #ff1919 99%);
+    height: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    
+
+}
+
+.footermini1 {
+    margin-top: 2%;
+    border-right: #000000 solid 2px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6%;
+    margin-bottom: 2%;
+
+}
+
+.footermini2 {
+
+    margin-left: 10%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
