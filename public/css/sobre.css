@@ -152,9 +152,9 @@ ul {
 
 .textodiv1 {
     line-height: 2.0rem;
-    width: 80%;
+    width: 70%;
     margin-left: 3%;
-    margin-top: 5%;
+    margin-top: 1%;
     text-align: justify;
     line-height: 2.5rem;
     
@@ -170,13 +170,14 @@ ul {
 
 .img1 {
     width: 420px;
-    height: 260px;
+    height: 200px;
     border-radius: 60px;
 }
 
 .imgdiv1 {
     margin-right: 3%;
-    margin-top: 2.5%;
+    margin-top: 1.5%;
+    
 }
 
 /* BLOCO 1 */
@@ -208,7 +209,7 @@ ul {
     line-height: 2.0rem;
     width: 80%;
    margin-left: 2%;
-   margin-top: 4%;
+   margin-top: 1%;
     text-align: justify;
     line-height: 2.3rem;
     
@@ -224,14 +225,14 @@ ul {
 }
 
 .img2 {
-    width: 400px;
-
+    width: 420px;
+    height: 200px;
     border-radius: 60px;
 }
 
 .imgdiv2 {
     margin-left: 3%;
-    margin-top: 2.5%;
+    margin-top: 1.5%;
 }
 
 /* BLOCO 2 */
@@ -242,7 +243,7 @@ ul {
     width: 100%;
     display: flex;
     height: 40%;
-    margin-top: 13%;
+    margin-top: 11%;
     background: linear-gradient(72deg, #710d06 10%, #ff1919 99%);
     transition: 0.7s;
 }
@@ -277,14 +278,15 @@ ul {
 }
 
 .img3 {
-    width: 400px;
+    width: 420px;
+    height: 200px;
     border-radius: 60px;
 
 }
 
 .imgdiv3 {
     margin-right: 3%;
-    margin-top: 3.5%;
+    margin-top: 1.5%;
 }
 
 /* BLOCO 3 */
@@ -317,7 +319,7 @@ ul {
     line-height: 2.0rem;
     width: 80%;
     margin-left: 2%;
-   margin-top: 4%;
+   margin-top: 2%;
   
     text-align: justify;
     line-height: 2.5rem;
@@ -332,14 +334,14 @@ ul {
 }
 
 .img4 {
-    width: 400px;
+    width: 420px;
+    height: 200px;
     border-radius: 60px;
-    margin-left: 10%;
 }
 
 .imgdiv4 {
-    margin-right: 3%;
-    margin-top: 3.5%;
+    margin-left: 3%;
+    margin-top: 2.5%;
 }
 
 
