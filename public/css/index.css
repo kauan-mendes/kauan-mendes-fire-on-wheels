@@ -264,7 +264,12 @@ input {
 /* footer */
 .footer {
     margin: none;
-    background: linear-gradient(72deg, #710d06 10%, #ff1919 99%);
+    background-image: linear-gradient(
+        to right,
+        #710d06 0%,
+        #ff1919 51%,
+        #3d176e97 100%
+      );
     height: 130px;
     width: 100%;
     display: flex;
