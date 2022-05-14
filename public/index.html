@@ -11,43 +11,101 @@
     <link rel="icon" href="assets/Logos/v1.png">
 </head>
 <body>
+    <div class="circle"></div>
     <header>
        
         <nav>
             <a href="index.html">
                 <img style="height: 57px;width: 100px; margin-left: 50%;" src="https://i.imgur.com/TI1YVGV.png">
                 </a>
-            
-            
-    
+        
                 <ul>
                     <li class="agora"> <a href="./index.html">Inicio</a></li>
                     <li> <a href="./sobre.html">Sobre</a></li>
                     <li> <a href="./login.html">Login</a></li>
                     <li> <a href="./cadastro.html">Cadastrar</a></li>
                 </ul>
-                
-                
+                 
         </nav>
         </header>
-    
-<div class="control1">
-<div class="textodiv1">
-<p>A fire on wheels tem como objetivo ajudar os motociclistas a <br> marcarem encontros para andar de moto. <br>
-    Cadastre-se agora e tenha acesso aos maiores encontros de <br> moto do brasil, participe de comunidades que incentivam e <br> apoiam esse hobby 
-    
-    Ao fazer um passeio curto ou uma viagem <br> com os amigos e/ou com uma boa companhia na garupa,<br> 
-    esse ato proporciona uma grande sensação de felicidade,<br> prazer e alegria.  É tudo isso que vai manter o seu cérebro e <br>
+
+
+
+   <div class="contentt">
+<div class="textbox">
+<h2>Não é só andar de moto <br>é a <span>Fire on wheels</span></h2>
+<p>A fire on wheels tem como objetivo ajudar os motociclistas a marcarem encontros para andar de moto. 
+    Cadastre-se agora e tenha acesso aos maiores encontros de moto do brasil, participe de comunidades que incentivam e apoiam esse hobby 
+    Ao fazer um passeio curto ou uma viagem com os amigos e/ou com uma boa companhia na garupa,
+    esse ato proporciona uma grande sensação de felicidade, prazer e alegria. É tudo isso que vai manter o seu cérebro e 
      o seu corpo jovem e eficiente, muito acima da média!</p>
+<a href="cadastro.html">Cadastre-se agora!</a>
 </div>
-
-<div class="imgdiv1">
-<img class="img1" src="https://www.usecorse.com/wordpress/wp-content/uploads/2021/10/andar-de-moto-01-930x650-1.jpg" alt="">
+<div class="imgbox">
+    <img src="assets/imgs/img2.png" class="fire">
 </div>
-</div> 
+   
+   </div>
+<ul class="thumb">
+    <li> <img src="assets/imgs/img1.png" onclick="imgSlider('assets/imgs/img1.png');changeCircleColor('#017143')"></li>
+    <li> <img src="assets/imgs/img2.png" onclick="imgSlider('assets/imgs/img2.png');changeCircleColor('#eb7495')"></li>
+    <li> <img src="assets/imgs/img3.png" onclick="imgSlider('assets/imgs/img3.png');changeCircleColor('#427535')"></li>
+
+</ul>
 
 
-    <div class="content">
+
+
+
+     </div>
+    </div>
+
+    <div class="footer">
+        
+        <div class="footermini1">
+        <h5 style="margin-right: 100px;">Fire on wheels &copy; 2022</h5>
+    </div>
+    <div class="footermini2">
+        <h4>Email: fireonwheels@gmail.com <br>
+            Telefone: (11) 4524-5824 <br>
+            Whatapp: (11) 96262-3116</h4>
+
+    </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+function imgSlider(anything){
+    document.querySelector('.fire').src = anything;
+}
+function changeCircleColor(color){
+    const circle = document.querySelector('.circle');
+    circle.style.background = color;
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="content">
         <p>Motos recomendadas</p>
      <div class="slides">
          <input type="radio" name="radio" id="slide1" checked>
@@ -74,23 +132,4 @@
             <label class="bar" for="slide5"></label>
             <label class="bar" for="slide6"></label>
             <label class="bar" for="slide7"></label>
-        </div>
-
-     </div>
-    </div>
-
-    <div class="footer">
-        
-        <div class="footermini1">
-        <h5 style="margin-right: 100px;">Fire on wheels &copy; 2022</h5>
-    </div>
-    <div class="footermini2">
-        <h4>Email: fireonwheels@gmail.com <br>
-            Telefone: (11) 4524-5824 <br>
-            Whatapp: (11) 96262-3116</h4>
-
-    </div>
-    </div>
-    
-</body>
-</html>
+        </div> -->
