@@ -149,27 +149,36 @@
             senhaVar == '' ||
             confirmacaoSenhaVar == '' ||
             cepVar == '' ||
-            enderecoVar == '' ||
+            cidadeVar == '' ||
             bairroVar == ''
 
-        ) {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        ) 
+        {
             mensagem_erro1.innerHTML = 'Preencha todos os campos para prosseguir!'
             finalizarAguardar();
             return false;
 
         } else if (emailVar.indexOf('@') <= 0 || emailVar.indexOf('.com') <= 0) {
-            mensagem_erro.innerHTML = 'Ops, e-mail inválido! Verifique e tente novamente.'
+            mensagem_erro1.innerHTML = 'Ops, e-mail inválido! Verifique e tente novamente.'
+            finalizarAguardar();
+            return false;
 
         } else if (senhaVar.length < 4) {
-            mensagem_erro.innerHTML = 'Senha muito curta, utilize pelo menos 4 caracteres.'
+            mensagem_erro1.innerHTML = 'Senha muito curta, utilize pelo menos 4 caracteres.'
+            finalizarAguardar();
+            return false;
         }
         else if (senhaVar != confirmacaoSenhaVar) {
-            mensagem_erro.innerHTML = 'As senhas inseridas devem ser iguais para prosseguir.'
+            mensagem_erro1.innerHTML = 'As senhas inseridas devem ser iguais para prosseguir.'
+            finalizarAguardar();
+            return false;
 
         } else if (cepVar.length < 8) {
-            mensagem_erro.innerHTML = 'Coloque um cep valido para prosseguir.'
+            mensagem_erro1.innerHTML = 'Coloque um cep valido para prosseguir.'
+            finalizarAguardar();
+            return false;
+        }else {
+            setInterval(sumirMensagem, 5000)
         }
 
 
@@ -197,8 +206,10 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                cardErro.style.display = "block";
 
+
+                cardErro.style.display = "block";
+                
                 mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                 setTimeout(() => {
