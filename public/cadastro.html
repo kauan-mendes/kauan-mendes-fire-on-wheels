@@ -9,7 +9,9 @@
     <link rel="icon" href="assets/Logos/v1.png">
     <link rel="stylesheet" href="css/cadastro.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <script src="js/cadastro.js"></script>
+    
+    <script src="./js/funcoes.js"></script>
+
 <body>
     <header>
         <nav>
@@ -27,8 +29,13 @@
     </header>
 
     <div class="maincadastro">
-       
-        
+
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+
 
 
         <div class="divdireita">
@@ -43,15 +50,15 @@
 
 
                 <div class="textfield">
-                    <label  for="usuario">Cep</label>
-                    <input id="input_cep" type="text" name="endereco" placeholder="Insira seu cpf ">
+                    <label for="usuario">Cep</label>
+                    <input id="input_cep" type="text" name="endereco" placeholder="Insira seu cep ">
                     <i class="uil uil-map-marker"></i>
                 </div>
 
                 <div class="endorg">
                     <div class="textfield">
-                        <label for="usuario">Rua</label>
-                        <input id="input_rua" type="text" name="endereco" placeholder="Insira sua rua ">
+                        <label for="usuario">Cidade</label>
+                        <input id="input_cidade" type="text" name="endereco" placeholder="Insira sua rua ">
                         <i class="uil uil-directions"></i>
                     </div>      
                     <div class="textfield">
@@ -84,14 +91,21 @@
 
 
                 <button onclick="cadastrar()" class="btncadastro">cadastro</button>
-              
-                <div id="mensagem_erro"></div>
+
+                <div id="mensagem_erro1"></div>
+                <div id="div_erros_login">
+                </div>
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+
             </div>
-            
+
         </div>
         <div class="divesquerda">
             <h1>Cadastre-se <br>E partipe dos maiores pesseios <br> de moto do brasil</h1>
-            <img src="https://media0.giphy.com/avatars/endurodelverano/7z0REJj5cv3R.gif" class="imgdivesquerda" >  
+            <img src="https://media0.giphy.com/avatars/endurodelverano/7z0REJj5cv3R.gif" class="imgdivesquerda">
         </div>
     </div>
 
@@ -101,7 +115,7 @@
             <h5 style="margin-right: 100px;">Fire on wheels &copy; 2022</h5>
         </div>
         <div class="footermini2">
-            
+
             <h4>Email: fireonwheels@gmail.com <br>
                 Telefone: (11) 4524-5824 <br>
                 Whatapp: (11) 96262-3116</h4>
@@ -114,8 +128,102 @@
 </body>
 
 </html>
+<script>
+    function cadastrar() {
+        aguardar();
+
+
+        var nomeVar = input_nome.value
+        var cepVar = input_cep.value
+        var cidadeVar = input_cidade.value
+        var bairroVar = input_bairro.value
+        var emailVar = input_email.value
+        var senhaVar = input_senha.value
+        var confirmacaoSenhaVar = input_confirmasenha.value
+
+        mensagem_erro.innerHTML = ``
+
+        if (
+            nomeVar == '' ||
+            emailVar == '' ||
+            senhaVar == '' ||
+            confirmacaoSenhaVar == '' ||
+            cepVar == '' ||
+            enderecoVar == '' ||
+            bairroVar == ''
+
+        ) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro1.innerHTML = 'Preencha todos os campos para prosseguir!'
+            finalizarAguardar();
+            return false;
+
+        } else if (emailVar.indexOf('@') <= 0 || emailVar.indexOf('.com') <= 0) {
+            mensagem_erro.innerHTML = 'Ops, e-mail inválido! Verifique e tente novamente.'
+
+        } else if (senhaVar.length < 4) {
+            mensagem_erro.innerHTML = 'Senha muito curta, utilize pelo menos 4 caracteres.'
+        }
+        else if (senhaVar != confirmacaoSenhaVar) {
+            mensagem_erro.innerHTML = 'As senhas inseridas devem ser iguais para prosseguir.'
+
+        } else if (cepVar.length < 8) {
+            mensagem_erro.innerHTML = 'Coloque um cep valido para prosseguir.'
+        }
+
+
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                
+                nomeServer: nomeVar,
+                cepServer: cepVar,
+                cidadeServer: cidadeVar, 
+                bairroServer: bairroVar, 
+                emailServer: emailVar, 
+                senhaServer: senhaVar
+                
+
+                
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>
 
 <!-- http://2.bp.blogspot.com/-SLsLnSsc3Zs/Thyxh-k51qI/AAAAAAAAAH0/l5CCGGw0krw/s1600/Motard.gif -->
 <!-- http://i737.photobucket.com/albums/xx20/oficinadogif/moto.gif -->
 <!-- https://i.pinimg.com/originals/5b/b4/7b/5bb47bb19cc3d3c790f42291212f7f0a.gif -->
-

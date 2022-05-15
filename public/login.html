@@ -27,6 +27,11 @@
     </header>
 
     <div class="mainlogin">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
 
         <div class="divesquerda">
             <h1>Faça login <br>E entre para o mundo dos motociclistas</h1>
@@ -52,6 +57,13 @@
                             agora</span></a>
                 </form>
 
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+                <div id="div_erros_login">
+
+                </div>
             </div>
         </div>
     </div>
