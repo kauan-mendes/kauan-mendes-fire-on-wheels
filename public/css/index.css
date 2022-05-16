@@ -124,12 +124,12 @@ body::-webkit-scrollbar-thumb {
     justify-content: flex-start;
     padding-right: 10px;
     margin-top: 50px;
-
+    
 }
 
 .contentt .imgbox img {
     max-width: 400px;
-
+    transition: 1.9s;
 }
 
 .thumb {
@@ -139,6 +139,8 @@ body::-webkit-scrollbar-thumb {
     height: 90px;
     transform: translateX(-50%);
     display: flex;
+   
+    
 
 }
 
@@ -165,7 +167,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .circle {
-
+transition: 1.0s;
     position: absolute;
     top: 0;
     left: 0;
@@ -201,6 +203,7 @@ margin-left: 83%;
 .tamimg{
     padding: 5px;
     width: 80px;
+    
     
 }
 .tamimg1{
