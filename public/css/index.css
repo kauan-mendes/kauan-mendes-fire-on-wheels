@@ -185,11 +185,11 @@ transition: 0.9s;
     position: absolute;
     margin-top: 45.4%;
    margin-left: 43%;
-   box-shadow: 8px 3px 17px 3px rgba(198, 193, 193, 0.427);
+   box-shadow: 8px 3px 17px 3px rgba(170, 0, 255, 0.427);
     width: 152px;
     height: 20px;
     padding: 0;
-    color: white;
+    color: rgb(255, 0, 0);
 }
 .redes{
     position: absolute;
