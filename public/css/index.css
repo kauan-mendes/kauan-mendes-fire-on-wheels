@@ -16,6 +16,7 @@ body {
             #14031d 51%,
             #0f0120 100%);
     font-family: 'Noto Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 .header a:hover {
@@ -24,7 +25,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 1rem;
+    width: 0.8rem;
 }
 
 /* cor de fundo do scroll */
@@ -37,6 +38,10 @@ body::-webkit-scrollbar-thumb {
     border-radius: 6px;
     /* roundness of the scroll thumb */
     border: 1px solid #e5e5e5;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(72deg, #ff1100 10%, #390303 99%);
+    
 }
 
 .agora {
@@ -183,8 +188,8 @@ transition: 0.9s;
 }
 .divcor{
     position: absolute;
-    margin-top: 45.4%;
-   margin-left: 43%;
+    margin-top: 43.4%;
+   margin-left: 44%;
    box-shadow: 8px 3px 17px 3px rgba(170, 0, 255, 0.427);
     width: 152px;
     height: 20px;
@@ -194,7 +199,7 @@ transition: 0.9s;
 .redes{
     position: absolute;
     top: 70%;
-margin-left: 86%;
+margin-left: 89%;
     transform: translateY(-50%);
     display: flex;
     justify-content: center;
