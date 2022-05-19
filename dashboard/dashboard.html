@@ -4,10 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>cadastro | Wheels</title>
-		<link rel="stylesheet" href="../public/css/dashboard.css" type="text/css"/>
+        <title>Dash | Wheels</title>
+		<link rel="stylesheet" href="../public/css/dashboard.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="../js/funcoes.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<link rel="icon" href="../public/assets/Logos/v1.png ">
 	</head>
     <!DOCTYPE html>
 
@@ -15,21 +16,18 @@
 		
 		<div id="mySidenav" class="sidenav">
 		<p class="logo"><span>F</span>ire on wheels</p>
-	  <a href="#" class="icon-a"><i class="fa fa-dashboard icons"></i>   Dashboard</a>
+	  <a href="#" class="icon-a"><i class="fa fa-dashboard icons"></i>   Dashwheels</a>
 	  <a href="#"class="icon-a"><i class="fa fa-users icons"></i>   Customers</a>
-	  <a href="#"class="icon-a"><i class="fa fa-list icons"></i>   Projects</a>
-	  <a href="#"class="icon-a"><i class="fa fa-shopping-bag icons"></i>   Orders</a>
-	  <a href="#"class="icon-a"><i class="fa fa-tasks icons"></i>   Inventory</a>
-	  <a href="#"class="icon-a"><i class="fa fa-user icons"></i>   Accounts</a>
-	  <a href="#"class="icon-a"><i class="fa fa-list-alt icons"></i>   Tasks</a>
+	  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+	  <a href="#"class="icon-a"><i class="fa fa-list-alt icons"></i>   Sair</a>
 
 	</div>
 	<div id="main">
 
 		<div class="head">
 			<div class="col-div-6">
-	<span style="font-size:30px;cursor:pointer; color: white;" class="nav"  >☰ Dashboard</span>
-	<span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >☰ Dashboard</span>
+	<span style="font-size:30px;cursor:pointer; color: white;" class="nav"  >☰ Dashwheels</span>
+	<span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >☰ Dashwheels</span>
 	</div>
 		
 		<div class="col-div-6">
@@ -43,26 +41,26 @@
 		
 		<div class="col-div-3">
 			<div class="box">
-				<p>67<br/><span>Customers</span></p>
-				<i class="fa fa-users box-icon"></i>
+				<p>26<br/><span>Membros</span></p>
+				<i class="uil uil-users-alt"></i>
 			</div>
 		</div>
 		<div class="col-div-3">
 			<div class="box">
-				<p>88<br/><span>Projects</span></p>
-				<i class="fa fa-list box-icon"></i>
+				<p>9<br/><span>Bairros</span></p>
+				<i class="uil uil-map-marker"></i>
 			</div>
 		</div>
 		<div class="col-div-3">
 			<div class="box">
-				<p>99<br/><span>Orders</span></p>
-				<i class="fa fa-shopping-bag box-icon"></i>
+				<p>40<br/><span>Passeios</span></p>
+				<i class="uil uil-map-pin"></i>
 			</div>
 		</div>
 		<div class="col-div-3">
 			<div class="box">
-				<p>78<br/><span>Tasks</span></p>
-				<i class="fa fa-tasks box-icon"></i>
+				<p>78<br/><span>Motos</span></p>
+				<img style="position: absolute;width: 20px;margin-top:4.7%;margin-left: 6px" src="https://cdn-icons-png.flaticon.com/512/27/27176.png" alt="">
 			</div>
 		</div>
 		<div class="clearfix"></div>
@@ -70,46 +68,51 @@
 		<div class="col-div-8">
 			<div class="box-8">
 			<div class="content-box">
-				<p>Top Selling Projects <span>Sell All</span></p>
+				<p>Melhores motos para passeios <span>Sell All</span></p>
 				<br/>
 				<table>
 	  <tr>
-	    <th>Company</th>
-	    <th>Contact</th>
-	    <th>Country</th>
+	    <th>Nome</th>
+	    <th>Motivo</th>
+	    <th>Tipo</th>
 	  </tr>
 	  <tr>
-	    <td>Alfreds Futterkiste</td>
-	    <td>Maria Anders</td>
-	    <td>Germany</td>
+	    <td>Touring</td>
+	    <td>Estabilidade com mais capacidade de carga</td>
+	    <td>Estrada</td>
 	  </tr>
 	  <tr>
-	    <td>Centro comercial Moctezuma</td>
-	    <td>Francisco Chang</td>
-	    <td>Mexico</td>
+	    <td>Big trail</td>
+	    <td>Potência e conforto para ganhar o mundo</td>
+	    <td>Estrada</td>
 	  </tr>
 	  <tr>
-	    <td>Ernst Handel</td>
-	    <td>Roland Mendel</td>
-	    <td>Austria</td>
+	    <td>Cruisers</td>
+	    <td>Praticidade e estilo sobre duas rodas</td>
+	    <td>Estrada</td>
 	  </tr>
 	  <tr>
-	    <td>Island Trading</td>
-	    <td>Helen Bennett</td>
-	    <td>UK</td>
+	    <td>Standard</td>
+	    <td>Facilidade para adaptar-se a cada tipo de destino</td>
+	    <td>Estrada</td>
 	  </tr>
+	
 	  
 	  
 	</table>
+
+	
 			</div>
+			
+			
 		</div>
 		</div>
 
 		<div class="col-div-4">
 			<div class="box-4">
 			<div class="content-box">
-				<p>Total Sale <span>Sell All</span></p>
-
+				
+			
 				<div class="circle-wrap">
 	    <div class="circle">
 	      <div class="mask full">
@@ -127,6 +130,15 @@
 			
 		<div class="clearfix"></div>
 	</div>
+	<div class="main-grafico">
+	<div style="position: relative; width:35vw">
+		<canvas id="CJS"></canvas>
+	</div>
+
+	<div style="position: relative; width:35vw">
+		<canvas id="CJSbarra"></canvas>
+	</div>
+</div>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -155,9 +167,79 @@
 	      $(".nav2").css('display','none');
 	 });
 
+	 const labels = [
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Temperatura',
+            backgroundColor: '#63247e',
+            borderColor: '#63247e',
+            data: [20+10, 30-1, 40-12, 50-25, 60-38, 70-47, 80, 90],
+        },{
+            label: 'Umidade',
+            backgroundColor: '#f7403b',
+            borderColor: '#f7403b',
+            data: [20+60, 30+58, 40+40, 50+35, 60+20, 70+13, 80, 90],
+        },
+    ]
+    };
+    const config = {
+        type: 'line',
+        data: data,
+        options: {}
+    };
+    //Finzaliza aqui o grafico 1
+    
+    const labels2 = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+    ];
+
+    const data2 = {
+        labels: labels,
+        datasets: [{
+            label: 'Temperatura média',
+            backgroundColor: '#63247e',
+            borderColor: '#f7403b',
+            data: [20+2, 30-6, 40-13, 50-27, 60-20, 70-52, 80, 90],
+        },{
+            label: 'Umidade média',
+            backgroundColor: '#f7403b',
+            borderColor: '#63247e',
+            data: [20+70, 30+59, 40+53, 50+37, 60+28, 70+12, 80, 90],
+        },
+    ]
+    };
+    const config2 = {
+        type: 'bar',
+        data: data2,
+        options: {}
+    };
+	const CJS = new Chart(
+        document.getElementById('CJS'),
+        config
+    );
+    const CJSbarra = new Chart(
+        document.getElementById('CJSbarra'),
+        config2
+    );
+
 	</script>
 
 	</body>
 
 
 	</html>
+	

@@ -2,7 +2,7 @@ body{
 	margin:0px;
 	padding: 0px;
 	background-color:#1b203d;
-	overflow: hidden;
+	
 	font-family: system-ui;
 }
 .clearfix{
@@ -88,9 +88,9 @@ body{
 	color: #818181;
 }
 .box-icon{
-	font-size: 40px!important;
+	font-size: 40px;
     float: right;
-    margin-top: 35px!important;
+    margin-top: 35px;
     color: #818181;
     padding-right: 10px;
 }
@@ -184,4 +184,13 @@ td, th {
   z-index: 100;
   font-weight: 700;
   font-size: 2em;
+}
+
+.main-grafico{
+  display: flex;
+  background-color: #272c4a;
+  height: 250px;
+  width: 73.4%;
+  margin-left: 24.3%;
+  
 }
