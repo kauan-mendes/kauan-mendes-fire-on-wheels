@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap');
 
 /* Configuração do banner */
@@ -15,49 +14,31 @@ body {
       );
     font-family: 'Noto Sans', sans-serif;
 }
-
 .header a:hover {
     color: #000000;
     transition: 0.5s;
-    
   }
-  
 
 body::-webkit-scrollbar {
     width: 1rem; 
   }
-  
+
   /* cor de fundo do scroll */
   body::-webkit-scrollbar-track {
     background: #201b2c; 
   }
-  
+
   body::-webkit-scrollbar-thumb {
     background: linear-gradient(72deg, #710d06 10%, #ff1919 99%);
     border-radius: 6px; /* roundness of the scroll thumb */
     border: 1px solid #e5e5e5;
   }
-  
+
 .agora{
     background: linear-gradient(72deg, #201b2c 10%, #302152 99%);
 }
-.adivb{
-    display: flex;
-    
-}
-.diva{
-width: 50%;
-height: 80px;
-background-color: #b0a6b5;
 
-}
-.divb{
-    width: 50%;
-    height: 80px;
-    background-color: #9914e1;
-}
-
-/* .imgindex p {
+.imgindex p {
     font-weight: 800;
     text-transform: uppercase;
     font-size: 37px;
@@ -75,20 +56,14 @@ background-color: #b0a6b5;
 
 .imgindex1 {
     width: 100%;
-    height: 260px;
+    height: 560px;
 }
 
 p {
     position: absolute;
     font-size: 20px;
     color: aliceblue;
-    cursor: pointer;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-    text-shadow: 2px 2px 4px #000000;
-    -webkit-transition: .7s;
-    transition: .7s; } */
-
+}
 
 /* Configuração Navbar */
 nav {
@@ -120,7 +95,7 @@ nav ul {
     list-style: none;
     display: flex;
     flex-direction: row;
-    
+
 
 }
 
@@ -135,8 +110,7 @@ li:hover,
     opacity: 0.8;
     background-color: #3d176e97;
     border-radius: 5px;
-    
-    
+
 }
 
 ul {
@@ -150,17 +124,16 @@ ul {
 
 
 /* BLOCO 1 */
-/* .control1 {
+.control1 {
     width: 100%;
     display: flex;
     height: 40%;
     margin-top: 15%;
     background: linear-gradient(72deg, #710d06 10%, #ff1919 99%);
     transition: 0.7s;
-    
 }
 .control1:hover{
-    
+
   background-image: linear-gradient(
     to right,
     #710d06 0%,
@@ -168,45 +141,44 @@ ul {
     #3d176e97 100%
   );
   transform: translateY(-20px);
- 
+
 }
 
 
 .textodiv1 {
     line-height: 2.0rem;
-    width: 70%;
+    width: 80%;
     margin-left: 3%;
-    margin-top: 1%;
+    margin-top: 5%;
     text-align: justify;
     line-height: 2.5rem;
-    
+
 }
 
 .textodiv1 p {
     font-weight: 800;
     text-transform: uppercase;
     font-size: 1.3rem;
-    
+
 
 }
 
 .img1 {
     width: 420px;
-    height: 200px;
+    height: 260px;
     border-radius: 60px;
 }
 
 .imgdiv1 {
     margin-right: 3%;
-    margin-top: 1.5%;
-    
-} */
+    margin-top: 2.5%;
+}
 
 /* BLOCO 1 */
 
 
 /* BLOCO 2 */
-/* .control2 {
+.control2 {
     width: 100%;
     display: flex;
     height: 40%;
@@ -216,7 +188,7 @@ ul {
     display: flex;
 }
 .control2:hover{
- 
+
     background-image: linear-gradient(
       to right,
       #710d06 0%,
@@ -224,53 +196,53 @@ ul {
       #3d176e97 100%
     );
     transform: translateY(-20px);
-   
+
   }
 
 .textodiv2 {
     line-height: 2.0rem;
     width: 80%;
    margin-left: 2%;
-   margin-top: 1%;
+   margin-top: 4%;
     text-align: justify;
     line-height: 2.3rem;
-    
-   
-    
+
+
+
 }
 
 .textodiv2 p {
     font-weight: 800;
     text-transform: uppercase;
     font-size: 1.3rem;
-    
+
 }
 
 .img2 {
-    width: 420px;
-    height: 200px;
+    width: 400px;
+
     border-radius: 60px;
 }
 
 .imgdiv2 {
     margin-left: 3%;
-    margin-top: 1.5%;
-} */
+    margin-top: 2.5%;
+}
 
 /* BLOCO 2 */
 
 
 /* BLOCO 3 */
-/* .control3 {
+.control3 {
     width: 100%;
     display: flex;
     height: 40%;
-    margin-top: 11%;
+    margin-top: 13%;
     background: linear-gradient(72deg, #710d06 10%, #ff1919 99%);
     transition: 0.7s;
 }
 .control3:hover{
- 
+
     background-image: linear-gradient(
       to right,
       #710d06 0%,
@@ -278,7 +250,7 @@ ul {
       #3d176e97 100%
     );
     transform: translateY(-20px);
-   
+
   }
 
 .textodiv3 {
@@ -286,7 +258,7 @@ ul {
     width: 80%;
     margin-left: 3%;
     margin-top: 6%;
-    
+
     text-align: justify;
     line-height: 2.5rem;
 
@@ -296,26 +268,25 @@ ul {
     font-weight: 800;
     text-transform: uppercase;
     font-size: 1.3rem;
-   
+
 }
 
 .img3 {
-    width: 420px;
-    height: 200px;
+    width: 400px;
     border-radius: 60px;
 
 }
 
 .imgdiv3 {
     margin-right: 3%;
-    margin-top: 1.5%;
-} */
+    margin-top: 3.5%;
+}
 
 /* BLOCO 3 */
 
 
 /* BLOCO 4 */
-/* .control4 {
+.control4 {
     width: 100%;
     display: flex;
     height: 42%;
@@ -325,7 +296,7 @@ ul {
 
 }
 .control4:hover{
- 
+
     background-image: linear-gradient(
       to right,
       #710d06 0%,
@@ -333,7 +304,7 @@ ul {
       #3d176e97 100%
     );
     transform: translateY(-20px);
-   
+
   }
 
 
@@ -341,8 +312,8 @@ ul {
     line-height: 2.0rem;
     width: 80%;
     margin-left: 2%;
-   margin-top: 2%;
-  
+   margin-top: 4%;
+
     text-align: justify;
     line-height: 2.5rem;
 }
@@ -350,21 +321,21 @@ ul {
 .textodiv4 p {
     font-weight: 800;
     text-transform: uppercase;
-   
+
     text-align: justify;
     line-height: 2.5rem;
 }
 
 .img4 {
-    width: 420px;
-    height: 200px;
+    width: 400px;
     border-radius: 60px;
+    margin-left: 10%;
 }
 
 .imgdiv4 {
-    margin-left: 3%;
-    margin-top: 2.5%;
-} */
+    margin-right: 3%;
+    margin-top: 3.5%;
+}
 
 
 
@@ -373,12 +344,7 @@ ul {
 /* footer */
 .footer {
     margin: none;
-    background-image: linear-gradient(
-    to right,
-    #710d06 0%,
-    #ff1919 51%,
-    #3d176e97 100%
-  );
+    background: linear-gradient(72deg, #710d06 10%, #ff1919 99%);
     height: 130px;
     width: 100%;
     display: flex;
@@ -408,4 +374,3 @@ ul {
     align-items: center;
 
 }
-
