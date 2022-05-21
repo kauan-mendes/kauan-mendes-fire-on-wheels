@@ -77,9 +77,9 @@
 	    <th>Tipo</th>
 	  </tr>
 	  <tr>
-	    <td>Touring</td>
+	    <td id="td_nome"></td>
 	    <td>Estabilidade com mais capacidade de carga</td>
-	    <td>Estrada</td>
+	    <td id="td_moto">Estrada</td>
 	  </tr>
 	  <tr>
 	    <td>Big trail</td>
@@ -143,6 +143,10 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
+td_nome.innerHTML = sessionStorage.NOME_USUARIO
+td_moto.innerHTML = sessionStorage.MOTO_USUARIO
+
+
 
 	  $(".nav").click(function(){
 	    $("#mySidenav").css('width','70px');
@@ -179,12 +183,12 @@
     const data = {
         labels: labels,
         datasets: [{
-            label: 'Temperatura',
+            label: 'Passeios',
             backgroundColor: '#63247e',
             borderColor: '#63247e',
             data: [20+10, 30-1, 40-12, 50-25, 60-38, 70-47, 80, 90],
         },{
-            label: 'Umidade',
+            label: 'Moto',
             backgroundColor: '#f7403b',
             borderColor: '#f7403b',
             data: [20+60, 30+58, 40+40, 50+35, 60+20, 70+13, 80, 90],
@@ -210,12 +214,12 @@
     const data2 = {
         labels: labels,
         datasets: [{
-            label: 'Temperatura média',
+            label: 'Passeios ',
             backgroundColor: '#63247e',
             borderColor: '#f7403b',
             data: [20+2, 30-6, 40-13, 50-27, 60-20, 70-52, 80, 90],
         },{
-            label: 'Umidade média',
+            label: 'Moto ',
             backgroundColor: '#f7403b',
             borderColor: '#63247e',
             data: [20+70, 30+59, 40+53, 50+37, 60+28, 70+12, 80, 90],

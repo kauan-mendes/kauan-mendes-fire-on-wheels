@@ -68,6 +68,7 @@ function cadastrar(req, res) {
     var bairro = req.body.bairroServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
+    var moto = req.body.motoServer;
 
 
 
@@ -81,7 +82,7 @@ function cadastrar(req, res) {
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, cep, cidade, bairro, email, senha)
+        usuarioModel.cadastrar(nome, cep, cidade, bairro, email, senha, moto)
             .then(
                 function (resultado) {
                     res.json(resultado);

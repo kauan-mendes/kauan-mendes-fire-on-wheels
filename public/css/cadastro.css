@@ -93,8 +93,8 @@ ul {
     );
     justify-content: center;
     align-items: center;
-    margin-top: 17%;
-    margin-bottom: 5%;
+    margin-top: 6%;
+    margin-bottom: -5%;
 
 
 
@@ -104,11 +104,10 @@ ul {
 
 .divdireita {
     width: 50vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 6%;
+  
 }
 
 .cardcadastro {
@@ -117,28 +116,22 @@ ul {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 30px 35px;
+    padding: 0px 30px;
     border-radius: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 40.6);
     background: rgba(255, 255, 255, 0.114);
     box-shadow: 8px 8px 22px 20px rgba(0, 0, 0, 0.427);
     
-    
-    
-    
 }
+
 .endorg{
-    
     display: flex;
-    
 }
-.endorg input{
-padding: 0px 20px;
-}
+
 
 .cardcadastro h1 {
     color: #ff1919;
-    font-weight: 800;
+    font-weight: 700;
     margin: 0;
 }
 
@@ -148,15 +141,15 @@ padding: 0px 20px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin: 17px 0px;
+    margin: 9px 0px;
 }
 
 .textfield input {
+    height: 30px;
     width: 100%;
     border: none;
     border-radius: 10px;
     background-color: #514869;
-    padding: 15px;
     color: #f0ffffde;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 40.6);
     background: rgba(255, 255, 255, 0.114);
@@ -166,6 +159,32 @@ padding: 0px 20px;
     border-bottom: 2px solid #da150b;
     padding-left: 32px;
 }
+
+.textfield select {
+   height: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: #514869;
+    color: #ffffffde;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 40.6);
+    background: rgba(255, 255, 255, 0.114);
+    box-shadow: 8px 8px 32px 20px rgba(0, 0, 0, 0.427);
+    outline: none;
+    box-sizing: border-box;
+    border-bottom: 2px solid #da150b;
+    padding-left: 32px;
+
+}
+option{
+    background-color: #514869;
+    
+}
+
+.senhaorg{
+    display: flex;
+}
+
 .signup-text:hover {
     text-decoration: underline;
 }
@@ -189,8 +208,8 @@ padding: 0px 20px;
 
 .btncadastro {
     width: 100%;
-    padding: 16px 0px;
-    margin: 25px;
+    padding: 13px 0px;
+    margin: 20px;
     border: none;
     border-radius: 9px;
     outline: none;
@@ -207,6 +226,7 @@ padding: 0px 20px;
 
 .btncadastro:hover {
     opacity: 0.8;
+    box-shadow: 0px 10px 40px -12px #180934;
     background-color: #302152;
     border-radius: 5px;
 }

@@ -126,9 +126,11 @@ function entrar() {
                 console.log(json);
                 console.log(JSON.stringify(json));
 
-                sessionStorage.EMAIL_USUARIO = json.email;
-                sessionStorage.NOME_USUARIO = json.nome;
-                sessionStorage.ID_USUARIO = json.id;
+                sessionStorage.EMAIL_USUARIO = json.emailUsuario;
+                sessionStorage.NOME_USUARIO = json.nomeUsuario;
+                sessionStorage.ID_USUARIO = json.idUsuario;
+                sessionStorage.MOTO_USUARIO = json.nomeMoto;
+
 
                 setTimeout(function () {
                     window.location = "./dashboard.html";

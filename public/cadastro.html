@@ -48,10 +48,23 @@
                     <i class="uil uil-user"></i>
                 </div>
 
+                <div class="textfield">
+                    <label for="senha">Moto preferida</label>
+                    <img style="width: 30px;position: absolute;margin-top: 14px;" src="https://cdn-icons-png.flaticon.com/512/1986/1986937.png" alt="">
+                    <select id="select_moto">
+                        <option value="nada">Selecione</option>
+                        <option value="1">BMW R 1200</option>
+                        <option value="2">Kawasaki Z750</option>
+                        <option value="3">Yamaha MT-07</option>
+                        <option value="4">Yamaha XJ6</option>
+                        <option value="5">Honda CB 500F</option>
+                      </select>
+                    </div>
+
 
                 <div class="textfield">
                     <label for="usuario">Cep</label>
-                    <input id="input_cep" type="text" name="endereco" placeholder="Insira seu cep ">
+                    <input onchange="viacep()" id="input_cep" type="text" name="endereco" placeholder="Insira seu cep ">
                     <i class="uil uil-map-marker"></i>
                 </div>
 
@@ -76,19 +89,19 @@
                     <i class="uil uil-envelope icon"></i>
                 </div>
 
-
+<div class="senhaorg">
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input id="input_senha" type="password" name="Senha" placeholder="Insira uma senha segura">
+                    <input id="input_senha" type="password" name="Senha" placeholder="Insira uma senha ">
                     <i class="uil uil-shield"></i>
-                </div>
+                </div>     
 
                 <div class="textfield">
                     <label for="usuario">Confirmar senha</label>
                     <input id="input_confirmasenha" type="password" name="Senha" placeholder="Confirme sua senha">
                     <i class="uil uil-shield-check"></i>
                 </div>
-
+            </div>
 
                 <button onclick="cadastrar()" class="btncadastro">cadastro</button>
 
@@ -132,7 +145,7 @@
     function cadastrar() {
         aguardar();
 
-
+  
         var nomeVar = input_nome.value
         var cepVar = input_cep.value
         var cidadeVar = input_cidade.value
@@ -140,6 +153,7 @@
         var emailVar = input_email.value
         var senhaVar = input_senha.value
         var confirmacaoSenhaVar = input_confirmasenha.value
+        var motoVar = Number(select_moto.value)
 
         mensagem_erro.innerHTML = ``
 
@@ -150,7 +164,8 @@
             confirmacaoSenhaVar == '' ||
             cepVar == '' ||
             cidadeVar == '' ||
-            bairroVar == ''
+            bairroVar == '' ||
+            motoVar == ''
 
         ) 
         {
@@ -196,7 +211,8 @@
                 cidadeServer: cidadeVar, 
                 bairroServer: bairroVar, 
                 emailServer: emailVar, 
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+                motoServer: motoVar
                 
 
                 
@@ -232,7 +248,22 @@
     function sumirMensagem() {
         cardErro.style.display = "none"
     }
-
+    function viacep() {
+        fetch(`https://viacep.com.br/ws/${input_cep.value}/json/`, {
+            method: "GET",
+            mode: "cors"
+        }).then(function (resposta) {
+            console.log(resposta)
+            resposta.json().then(function (data) {
+                console.log(data)
+                input_bairro.value = data.bairro;
+                input_cidade.value = data.localidade
+            })
+        }).catch(function (erro) {
+            console.log(erro)
+        })
+    }
+  
 </script>
 
 <!-- http://2.bp.blogspot.com/-SLsLnSsc3Zs/Thyxh-k51qI/AAAAAAAAAH0/l5CCGGw0krw/s1600/Motard.gif -->
