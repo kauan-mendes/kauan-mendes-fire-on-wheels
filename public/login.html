@@ -9,6 +9,7 @@
     <link rel="icon" href="assets/Logos/v1.png">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 <script src="js/login.js"></script>
 <script src="js/funcoes.js"></script>
 <body>
@@ -50,6 +51,7 @@
                     <label for="senha">Senha</label>
                     <input id="input_senha" type="password" name="senha" placeholder="Entre com sua senha">
                     <i class="uil uil-lock icon"></i>
+                    <span class="lnr lnr-eye"></span>
                 </div>
                 <button onclick="entrar()"  class="btnlogin">Login</button>
                 <form>
@@ -88,6 +90,17 @@
 
 </html>
 <script>
+
+    let btn = document.querySelector('.lnr-eye');
+btn.addEventListener('click', function() {
+    let input = document.querySelector('#password');
+    if(input.getAttribute('type') == 'password') {
+        input.setAttribute('type', 'text');
+    } else {
+        input.setAttribute('type', 'password');
+    }
+});
+
 function entrar() {
     aguardar()
 
