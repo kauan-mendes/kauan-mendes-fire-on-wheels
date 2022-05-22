@@ -15,6 +15,13 @@ body {
 .agora{
     background: linear-gradient(72deg, #201b2c 10%, #302152 99%);
 }
+.uil-eye{
+    margin-left: 12%;
+    margin-top: 0.2%;
+     
+     cursor: pointer;
+     
+ }
 body::-webkit-scrollbar {
     width: 1rem; 
   }

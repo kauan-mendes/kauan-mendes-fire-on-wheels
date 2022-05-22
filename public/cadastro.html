@@ -94,12 +94,14 @@
                     <label for="senha">Senha</label>
                     <input id="input_senha" type="password" name="Senha" placeholder="Insira uma senha ">
                     <i class="uil uil-shield"></i>
+                    <i class="uil uil-eye"></i>
                 </div>     
 
                 <div class="textfield">
                     <label for="usuario">Confirmar senha</label>
                     <input id="input_confirmasenha" type="password" name="Senha" placeholder="Confirme sua senha">
                     <i class="uil uil-shield-check"></i>
+                    
                 </div>
             </div>
 
@@ -142,10 +144,32 @@
 
 </html>
 <script>
+
+var btn = document.querySelector('.uil-eye');
+btn.addEventListener('click', function() {
+    var input = document.querySelector('#input_senha');
+    if(input.getAttribute('type') == 'password') 
+    {
+        input.setAttribute('type', 'text');
+    } else {
+        input.setAttribute('type', 'password');
+    }
+});
+var btn = document.querySelector('.uil-eye');
+btn.addEventListener('click', function() {
+    var input = document.querySelector('#input_confirmasenha');
+    if(input.getAttribute('type') == 'password') 
+    {
+        input.setAttribute('type', 'text');
+    } else {
+        input.setAttribute('type', 'password');
+    }
+});
+
     function cadastrar() {
         aguardar();
 
-  
+        
         var nomeVar = input_nome.value
         var cepVar = input_cep.value
         var cidadeVar = input_cidade.value

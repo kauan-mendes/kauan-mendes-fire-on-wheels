@@ -49,9 +49,9 @@
                 </div>
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input id="input_senha" type="password" name="senha" placeholder="Entre com sua senha">
+                    <input id="input_senha" type="password" name="password" placeholder="Entre com sua senha">
                     <i class="uil uil-lock icon"></i>
-                    <span class="lnr lnr-eye"></span>
+                    <i class="uil uil-eye"></i>
                 </div>
                 <button onclick="entrar()"  class="btnlogin">Login</button>
                 <form>
@@ -91,10 +91,11 @@
 </html>
 <script>
 
-    let btn = document.querySelector('.lnr-eye');
+    var btn = document.querySelector('.uil-eye');
 btn.addEventListener('click', function() {
-    let input = document.querySelector('#password');
-    if(input.getAttribute('type') == 'password') {
+    var input = document.querySelector('#input_senha');
+    if(input.getAttribute('type') == 'password') 
+    {
         input.setAttribute('type', 'text');
     } else {
         input.setAttribute('type', 'password');

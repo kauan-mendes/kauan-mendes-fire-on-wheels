@@ -10,11 +10,13 @@ body {
 .agora{
     background: linear-gradient(72deg, #201b2c 10%, #302152 99%);
 }
-.lnr-eye {
-    position: absolute;
-    top: 5px;
-    right: 10px;
+
+.uil-eye{
+   margin-left: 26%;
+   margin-top: 0.2%;
+    
     cursor: pointer;
+    
 }
 body::-webkit-scrollbar {
     width: 1rem; 
