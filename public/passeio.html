@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/Logos/v1.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,78 +17,78 @@
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 </head>
+
 <body onload="atualizarFeed()">
     <div id="mySidenav" class="sidenav">
-		<p class="logo"><span>F</span>ire on wheels</p>
+        <p class="logo"><span>F</span>ire on wheels</p>
         <div class="hello">
             <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
         </div>
-	  <a href="dashboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i>   Dashwheels</a>
-	  <a href="passeio.html"class="icon-a"><i class="fa fa-users icons"></i>   Consultar passeios</a>
-	  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-	  <a href="login.html"class="icon-a"><i class="fa fa-list-alt icons"></i>   Sair</a>
+        <a href="dashboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i> Dashwheels</a>
+        <a href="passeio.html" class="icon-a"><i class="fa fa-users icons"></i> Consultar passeios</a>
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <a href="login.html" class="icon-a"><i class="fa fa-list-alt icons"></i> Sair</a>
 
-	</div>
-	<div id="main">
+    </div>
+    <div id="main">
 
-		<div class="head">
-			<div class="col-div-6">
-	<span style="font-size:30px;cursor:pointer; color: white;" class="nav"  >☰ Dashwheels</span>
-	<span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >☰ Dashwheels</span>
-	</div>
-		
-		<div class="col-div-6">
-		
-	</div>
-		<div class="clearfix"></div>
-	</div>
-
-		<div class="clearfix"></div>
-    <div class="janela">
-
-
-       
-
-            
+        <div class="head">
+            <div class="col-div-6">
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav">Agendas proximas</span>
             </div>
+
+            <div class="col-div-6">
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="janela">
+
+
+
+
 
         </div>
 
-        <div class="dash-right">
+    </div>
 
-            <div class="avisos">
-                <div class="container">
-                    <h1>Agendar um passeio</h1>
-                    <div class="div-form">
-                        <form id="form_postagem" method="post" onsubmit="return publicar()">
-                            <label>
-                                Título:
-                                <br>
-                                <input name="titulo" id="titulo" maxlength="100" type="text">
-                            </label>
+    <div class="dash-right">
+
+        <div class="avisos">
+            <div class="container">
+                <h1>Agendar um passeio</h1>
+                <div class="div-form">
+                    <form id="form_postagem" method="post" onsubmit="return publicar()">
+                        <label>
+                            Título:
                             <br>
-                            <label>
-                                Descrição (máximo de 250 caracteres):
-                                <br>
-                                <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
-                            </label>
+                            <input name="titulo" id="titulo" maxlength="100" type="text">
+                        </label>
+                        <br>
+                        <label>
+                            Descrição (máximo de 250 caracteres):
                             <br>
-                            <button>Enviar</button>
-                        </form>
-                    </div>
-                    <h1>Passeios Agendados</h1>
-                    <div class="div-results">
-                        <div id="feed_container" class="feed-container">
-                        </div>
+                            <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                        </label>
+                        <br>
+                        <button>Enviar</button>
+                    </form>
+                </div>
+                <h1>Passeios Agendados</h1>
+                <div class="div-results">
+                    <div id="feed_container" class="feed-container">
                     </div>
                 </div>
             </div>
-
-
-
-
-
         </div>
+
+
+
+
+
+    </div>
     </div>
 
 
@@ -101,10 +101,10 @@
 <script>
 
 
-    
+
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    
-   
+
+
     function limparFormulario() {
         document.getElementById("form_postagem").reset();
     }
@@ -209,7 +209,7 @@
 
                         spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
                         spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
-                       
+
                         divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
                         btnEditar.innerHTML = "Editar";
                         btnDeletar.innerHTML = "Deletar";

@@ -36,6 +36,7 @@ body {
   color: #818181;
   display: block;
   transition: 0.3s;
+  
 }
 .sidenav a:hover {
   color: #f1f1f1;
@@ -107,7 +108,7 @@ body {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: #0f0f41;
   width: 120px;
 }
 
@@ -120,8 +121,13 @@ body {
   font-size: 14px;
   padding: 5px 8px;
   color: white;
-  background-color: #e6005a;
+  background-color: #0d0c50;
   width: 80px;
+  transition: .7s;
+}
+.publicacao-btn-editar:hover{
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .publicacao {
@@ -131,8 +137,25 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid #e6005a;
+  border-bottom: 20px solid #080927; 
   padding: 20px;
+  
+}
+.dash-right {
+  display: flex;
+  width: 72%;
+  height: fit-content;
+  background-image: linear-gradient(
+    to right,
+    #1d043d 0%,
+    #14031d 51%,
+    #0f0120 100%
+  );
+  position: relative;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  border-radius: 20px;
 }
 
 .publicacao > *:not(:last-child) {
@@ -233,7 +256,7 @@ body {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: #00e673;
   margin: 5px;
 }
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -289,15 +312,7 @@ input {
   border-radius: 10px;
 }
 
-.dash-right {
-  display: flex;
-  width: 75%;
-  height: fit-content;
-  background-color: #161618;
-  position: relative;
-  top: 0;
-  left: 25%;
-}
+
 
 
 
@@ -305,16 +320,18 @@ input {
   width: 100%;
   display: flex;
   justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .hello h3 {
-  color: #e3b062;
+  color: #ffffff;
   font-weight: 300;
   font-size: 1.2rem;
 }
 
 .hello h3 span {
   font-weight: 800;
+  color: #ff0000;
 }
 
 

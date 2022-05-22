@@ -244,3 +244,19 @@ td, th {
   align-items: center;
 
 }
+.hello {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hello h3 {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.hello h3 span {
+  font-weight: 800;
+  color: #ff0000;
+}
