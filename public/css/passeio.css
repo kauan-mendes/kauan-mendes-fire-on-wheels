@@ -4,6 +4,58 @@
 body {
   font-family: "Exo 2", sans-serif;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: rgb(225, 225, 225);
+  text-decoration: none;
+  background-color:#1b203d
+}
+
+h1,
+a {
+  color: white;
+  text-decoration: none;
+  padding: 0px 8px;
+}
+
+nav ul {
+  align-items: center;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  padding: 0 25px;
+  transition: .7s;
+}
+
+li:hover,
+.h1:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  
+  border-radius: 5px;
+  transform: translatex(-10px);
+  
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+  transition: all .5s;
+}
+
+
+
+
+
+
 .clearfix{
 	clear: both;
 }
@@ -17,27 +69,11 @@ body {
 .logo span{
 	color: #f7403b;
 }
-.sidenav {
-  height: 100%;
-  width: 300px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #272c4a;
-  overflow: hidden;
-  transition: 0.5s;
-  padding-top: 30px;
-}
-.sidenav a {
-  padding: 15px 8px 15px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+#mySidenav.sidenav{
+  background-color:#1b203d ;
   
 }
+
 body::-webkit-scrollbar {
   width: 1rem; 
 }
@@ -55,13 +91,9 @@ body::-webkit-scrollbar-thumb {
 .sidenav a:hover {
   color: #f1f1f1;
   background-color:#1b203d;
+  transform: translateX(-14px);
 }
-.sidenav{
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-}
+
 #main {
   transition: margin-left .5s;
   padding: 16px;
@@ -106,9 +138,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .dash-right .avisos .div-form textarea {
-  width: 100%;
-  /* color: #E6005A; */
-  border: 3px solid #e6005a;
+  width: 102%;
+  border: 2px solid #000000;
   background-color: white;
   border-radius: 5px;
 }
@@ -159,16 +190,11 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   width: 72%;
   height: fit-content;
-  background-image: linear-gradient(
-    to right,
-    #1d043d 0%,
-    #14031d 51%,
-    #0f0120 100%
-  );
+  background-color:#080927 ;
   position: relative;
   top: 0;
-  left: 25%;
-  right: 25%;
+  left: 15%;
+ 
   border-radius: 20px;
 }
 
@@ -215,7 +241,7 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   height: 180px;
   justify-content: right;
-  background-color: #212124;
+  background-color: #9e9ea0;
   font-size: 20px;
 }
 
@@ -320,7 +346,7 @@ button {
 
 input {
   margin-bottom: 10px;
-  border: 2px solid #32b9cd;
+  border: 3px solid #050505;
   padding: 10px;
   text-align: center;
   border-radius: 10px;
@@ -332,6 +358,7 @@ input {
 
 .hello {
   width: 100%;
+  margin-left: -12%;
   display: flex;
   justify-content: center;
   font-family: 'Courier New', Courier, monospace;
@@ -345,7 +372,7 @@ input {
 
 .hello h3 span {
   font-weight: 800;
-  color: #ff0000;
+  color: #f7403b;
 }
 
 
@@ -363,10 +390,11 @@ body{
 }
 .logo{
 	margin: 0px;
-	margin-left: 28px;
+	margin-left: 3%;
     font-weight: bold;
     color: white;
     margin-bottom: 30px;
+    font-size: 20px;
 }
 .logo span{
 	color: #f7403b;

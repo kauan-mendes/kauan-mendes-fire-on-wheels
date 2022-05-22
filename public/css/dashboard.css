@@ -259,9 +259,11 @@ td, th {
 
 }
 .hello {
-  width: 100%;
+  
   display: flex;
   justify-content: center;
+  margin-right: 67%;
+  margin-top: 10%;
 }
 
 .hello h3 {

@@ -16,9 +16,7 @@
 		
 		<div id="mySidenav" class="sidenav">
 		<p class="logo"><span>F</span>ire on wheels</p>
-		<div class="hello">
-            <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-        </div>
+		
 	  <a href="#" class="icon-a"><i class="fa fa-dashboard icons"></i>   Dashwheels</a>
 	  <a href="passeio.html"class="icon-a"><i class="fa fa-users icons"></i>   Consultar passeios</a>
 	  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -32,8 +30,12 @@
 	<span style="font-size:30px;cursor:pointer; color: white;" class="nav"  >☰ Dashwheels</span>
 	<span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >☰ Dashwheels</span>
 	</div>
+	<div class="hello">
+		<h3>Olá, <span id="b_usuario">usuário</span>, seja bem vindo de volta!</h3>
+	</div>
 		
 		<div class="col-div-6">
+			
 		
 	</div>
 		<div class="clearfix"></div>
@@ -162,7 +164,7 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 	     $(".icons").css('margin-left', '-8px');
 	      $(".nav").css('display','none');
 	      $(".nav2").css('display','block');
-		  $("h3").css();
+		  
 	  });
 
 	$(".nav2").click(function(){
@@ -173,7 +175,7 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 	     $(".icons").css('visibility', 'visible');
 	     $(".nav").css('display','block');
 	      $(".nav2").css('display','none');
-		  $("h3 span").css();
+		  
 	 });
 
 	 const labels = [
