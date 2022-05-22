@@ -1,3 +1,7 @@
+CREATE DATABASE fireonwheels;
+
+USE fireonwheels;
+
 CREATE TABLE moto(
 idMoto INT PRIMARY KEY AUTO_INCREMENT,
 nomeMoto VARCHAR(255)
@@ -24,17 +28,28 @@ FOREIGN KEY(fk_moto)REFERENCES moto (idMoto)
 );
 
 CREATE TABLE passeio(
-idPasseio INT PRIMARY KEY AUTO_INCREMENT,
-dthora DATETIME,
-localPasseio VARCHAR(255),
-Descricao VARCHAR(1000),
+id INT PRIMARY KEY AUTO_INCREMENT,
+titulo VARCHAR(60),
+descricao VARCHAR(250),
 fk_usuarioHost INT,
 FOREIGN KEY(fk_usuarioHost)REFERENCES usuario(idUsuario)
 );
+
 
 SELECT usuario.*, moto.nomeMoto FROM usuario 
 JOIN moto ON moto.idMoto = usuario.fk_moto;
 
 
 
-
+SELECT 
+            a.id AS id_Passeio,
+            a.titulo,
+            a.descricao,
+            a.fk_usuarioHost,
+            u.idUsuario,
+            u.nomeUsuario,
+            u.emailUsuario,
+            u.senhaUsuario
+        FROM passeio as a
+            INNER JOIN usuario as u
+                ON a.fk_usuarioHost = u.idUsuario;
