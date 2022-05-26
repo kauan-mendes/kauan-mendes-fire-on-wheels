@@ -3,8 +3,11 @@
 *,
 body {
   font-family: "Exo 2", sans-serif;
+  background-size: cover;
+  transition: .1s;
 }
 nav {
+  
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -13,6 +16,7 @@ nav {
   color: rgb(225, 225, 225);
   text-decoration: none;
   background-color:#1b203d
+  
 }
 
 h1,
@@ -190,7 +194,11 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   width: 72%;
   height: fit-content;
-  background-color:#080927 ;
+  border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 40.6);
+    background: rgba(0, 0, 0, 0.685);
+    box-shadow: 8px 8px 22px 20px rgba(0, 0, 0, 0.427);
+
   position: relative;
   top: 0;
   left: 15%;
