@@ -1,10 +1,12 @@
 /* pagina mural */
 
-*,
+
 body {
+  background-image: url("https://wallpaperaccess.com/full/7202890.jpg");
   font-family: "Exo 2", sans-serif;
   background-size: cover;
-  transition: .1s;
+  transition: 1.8s;
+  
 }
 nav {
   
@@ -111,44 +113,44 @@ body::-webkit-scrollbar-thumb {
 	float: left;
 }
 
-.dash-right .avisos {
+.dd .avisos {
   width: 100%;
   /* border: 3px solid pink; */
   color: rgb(216, 216, 216);
   font-family: "Exo 2", sans-serif;
 }
 
-.dash-right .avisos .container {
+.dd .avisos .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.dash-right .avisos .container .div-form {
+.dd .avisos .container .div-form {
   width: 100%;
 }
 
-.dash-right .avisos .container .div-form #form_postagem {
+.dd .avisos .container .div-form #form_postagem {
   width: 100%;
 }
 
-.dash-right .avisos .div-form label {
+.dd .avisos .div-form label {
   width: 100%;
 }
 
-.dash-right .avisos .div-form input {
+.dd .avisos .div-form input {
   width: 100%;
   border-radius: 5px;
 }
 
-.dash-right .avisos .div-form textarea {
+.dd .avisos .div-form textarea {
   width: 102%;
   border: 2px solid #000000;
   background-color: white;
   border-radius: 5px;
 }
 
-.dash-right .avisos .div-form button {
+.dd .avisos .div-form button {
   cursor: pointer;
   font-family: "Exo 2", sans-serif;
   border: 0;
@@ -161,23 +163,6 @@ body::-webkit-scrollbar-thumb {
   width: 120px;
 }
 
-.publicacao-btn-editar {
-  cursor: pointer;
-  font-family: "Exo 2", sans-serif;
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 5px 8px;
-  color: white;
-  background-color: #0d0c50;
-  width: 80px;
-  transition: .7s;
-}
-.publicacao-btn-editar:hover{
-  background-color: #ffffff;
-  color: #000000;
-}
 
 .publicacao {
   display: flex;
@@ -190,14 +175,14 @@ body::-webkit-scrollbar-thumb {
   padding: 20px;
   
 }
-.dash-right {
+.dd{
   display: flex;
   width: 72%;
-  
+  border: #2b2b63 4px solid;
   height: fit-content;
   border-radius: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 40.6);
-    background: rgba(0, 0, 0, 0.685);
+    background: rgba(46, 46, 46, 0.685);
     box-shadow: 8px 8px 22px 20px rgba(0, 0, 0, 0.427);
 
   position: relative;
