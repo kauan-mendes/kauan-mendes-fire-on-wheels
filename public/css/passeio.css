@@ -193,6 +193,7 @@ body::-webkit-scrollbar-thumb {
 .dash-right {
   display: flex;
   width: 72%;
+  
   height: fit-content;
   border-radius: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 40.6);

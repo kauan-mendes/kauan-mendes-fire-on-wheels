@@ -25,5 +25,6 @@ function mudanca_tela_login(){
 
 setInterval(
    function(){
-   mudanca_tela_login()
-},3000);
+   mudanca_tela_login()  
+   
+},3000); 
