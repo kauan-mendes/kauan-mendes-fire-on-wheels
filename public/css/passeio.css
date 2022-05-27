@@ -62,9 +62,7 @@ ul {
 
 
 
-.clearfix{
-	clear: both;
-}
+
 .logo{
 	margin: 0px;
 	margin-left: 28px;
@@ -75,10 +73,7 @@ ul {
 .logo span{
 	color: #f7403b;
 }
-#mySidenav.sidenav{
-  background-color:#1b203d ;
-  
-}
+
 
 body::-webkit-scrollbar {
   width: 1rem; 
@@ -94,11 +89,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 6px; /* roundness of the scroll thumb */
   border: 1px solid #e5e5e5;
 }
-.sidenav a:hover {
-  color: #f1f1f1;
-  background-color:#1b203d;
-  transform: translateX(-14px);
-}
+
 
 #main {
   transition: margin-left .5s;
@@ -351,11 +342,12 @@ input {
 
 
 .hello {
-  width: 100%;
-  margin-left: -12%;
+  width: 70%;
+  margin-left: 4%;
   display: flex;
   justify-content: center;
   font-family: 'Courier New', Courier, monospace;
+  background-color: #0809279d;
 }
 
 .hello h3 {
