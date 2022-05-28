@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passeio | Avisos</title>
 
-    
+
     <link rel="stylesheet" href="./css/passeio.css">
     <script src="../js/funcoes.js"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -16,45 +16,39 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-        <script src="js/vetorimg.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/vetorimg.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body onload="atualizarFeed() ">
-    
+
     <nav>
         <a href="index.html">
-            <img style="height: 57px;width: 100px; margin-left: 50%;" src="https://cdn.pixabay.com/photo/2012/04/02/12/37/motorcycle-24371_1280.png">
-            </a>
-    
-            <ul>
-                
-                <li> <a href="dashboard.html" ><i class="uil uil-angle-left-b"></i>Dashwheels</a></li>
-                <li> <a href="login.html"> Sair <i class="uil uil-signout"></i></a></li>
-               
-            </ul>
-             
+            <img style="height: 57px;width: 100px; margin-left: 50%;"
+                src="https://cdn.pixabay.com/photo/2012/04/02/12/37/motorcycle-24371_1280.png">
+        </a>
+
+        <ul>
+
+            <li> <a href="dashboard.html"><i class="uil uil-angle-left-b"></i>Dashwheels</a></li>
+            <li> <a href="login.html"> Sair <i class="uil uil-signout"></i></a></li>
+
+        </ul>
+
     </nav>
     </header>
-    <p class="logo"><span>F</span>ire on wheels</p>
+ 
 
     
-    <div id="main">
-
-        
-            <div class="hello">
-                <h3>Vamos agendar um passeio <span id="b_usuario">usuário</span>, não esqueca do local e horário na descrição</h3>
-            </div>
-
-
-      
-
-    </div>
 
     <div class="dd">
 
         <div class="avisos">
             <div class="container">
+                <div class="hello">
+                    <h3>Vamos agendar um passeio <span id="b_usuario">usuário</span>, não esqueca do local e horário na
+                        descrição</h3>
+                </div>
                 <h1>Agendar um passeio</h1>
                 <div class="div-form">
                     <form id="form_postagem" method="post" onsubmit="return publicar()">
@@ -65,7 +59,7 @@
                         </label>
                         <br>
                         <label>
-                            Descrição (máximo de 250 caracteres):
+                            Descrição (Coloque horário e local):
                             <br>
                             <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
                         </label>
@@ -73,7 +67,7 @@
                         <button>Enviar</button>
                     </form>
                 </div>
-                <h1>Passeios Agendados</h1>
+                <h1>Passeios próximos</h1>
                 <div class="div-results">
                     <div id="feed_container" class="feed-container">
                     </div>
@@ -124,27 +118,27 @@
         }).then(function (resposta) {
 
             console.log("resposta: ", resposta);
-            
+
 
             if (resposta.ok) {
-                
+
                 Swal.fire({
-  position: 'center',
-  icon: 'success',
-  title: 'Post realizado com sucesso pelo usuario '  + nomeUsuario + '!',
-  showConfirmButton: false,
-  timer: 1200
-})
-               
-                
-                
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Post realizado com sucesso pelo usuario ' + nomeUsuario + '!',
+                    showConfirmButton: false,
+                    timer: 1200
+                })
+
+
+
                 setTimeout(function () {
                     window.location = "passeio.html";
                 }, 1350);
                 limparFormulario();
                 finalizarAguardar();
-                
-                
+
+
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {
@@ -178,19 +172,19 @@
 
             if (resposta.ok) {
                 Swal.fire({
-  position: 'center',
-  icon: 'success',
-  title: 'Post deletado com sucesso pelo usuario de email: '  + sessionStorage.getItem("EMAIL_USUARIO") + '!',
-  showConfirmButton: false,
-  timer: 1200
-})
-               
-                
-                
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Post deletado com sucesso pelo usuario de email: ' + sessionStorage.getItem("EMAIL_USUARIO") + '!',
+                    showConfirmButton: false,
+                    timer: 1200
+                })
+
+
+
                 setTimeout(function () {
                     window.location = "passeio.html";
                 }, 1350);
-                
+
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {
