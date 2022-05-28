@@ -17,6 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
         <script src="js/vetorimg.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body onload="atualizarFeed() ">
@@ -106,6 +107,7 @@
     }
 
     function publicar() {
+        var nomeUsuario = sessionStorage.NOME_USUARIO;
         var idUsuario = sessionStorage.ID_USUARIO;
 
         var corpo = {
@@ -122,12 +124,27 @@
         }).then(function (resposta) {
 
             console.log("resposta: ", resposta);
+            
 
             if (resposta.ok) {
-                window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
-                window.location = "passeio.html";
+                
+                Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Post realizado com sucesso pelo usuario '  + nomeUsuario + '!',
+  showConfirmButton: false,
+  timer: 1200
+})
+               
+                
+                
+                setTimeout(function () {
+                    window.location = "passeio.html";
+                }, 1350);
                 limparFormulario();
                 finalizarAguardar();
+                
+                
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {
@@ -160,8 +177,20 @@
         }).then(function (resposta) {
 
             if (resposta.ok) {
-                window.alert("Post deletado com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
-                window.location = "passeio.html"
+                Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Post deletado com sucesso pelo usuario de email: '  + sessionStorage.getItem("EMAIL_USUARIO") + '!',
+  showConfirmButton: false,
+  timer: 1200
+})
+               
+                
+                
+                setTimeout(function () {
+                    window.location = "passeio.html";
+                }, 1350);
+                
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {

@@ -9,6 +9,7 @@
     <link rel="icon" href="assets/Logos/v1.png">
     <link rel="stylesheet" href="css/cadastro.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <script src="./js/funcoes.js"></script>
 
@@ -107,13 +108,14 @@
 
                 <button onclick="cadastrar()" class="btncadastro">cadastro</button>
 
+                
+                <div id="div_aguardar" class="loading-div">
+                    <img src="https://media0.giphy.com/media/L1d4e47pZJShRGgbnz/giphy.gif?cid=4d1e4f299723828b0db4776460e8484b3ffb26d5147340ea&rid=giphy.gif" id="loading-gif">
+                </div>
+
                 <div id="mensagem_erro1"></div>
                 <div id="div_erros_login">
                 </div>
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
-
 
             </div>
 
@@ -178,6 +180,7 @@ btn.addEventListener('click', function() {
         var senhaVar = input_senha.value
         var confirmacaoSenhaVar = input_confirmasenha.value
         var motoVar = Number(select_moto.value)
+        var motoVarValidacao = select_moto.value
 
         mensagem_erro.innerHTML = ``
 
@@ -193,30 +196,64 @@ btn.addEventListener('click', function() {
 
         ) 
         {
-            mensagem_erro1.innerHTML = 'Preencha todos os campos para prosseguir!'
+            Swal.fire(
+  'Verificou todos os campos?',
+  'Preencha todos os campos para prosseguir!',
+  'error'
+)
+            
             finalizarAguardar();
             return false;
 
         } else if (emailVar.indexOf('@') <= 0 || emailVar.indexOf('.com') <= 0) {
-            mensagem_erro1.innerHTML = 'Ops, e-mail inválido! Verifique e tente novamente.'
+            Swal.fire(
+  'Ops',
+  'e-mail inválido! Verifique e tente novamente.',
+  'error'
+)
+     
+           
             finalizarAguardar();
             return false;
 
+        }else if (motoVarValidacao == "nada") {
+            Swal.fire(
+  'Ops',
+  'Esqueceu da sua moto preferida.',
+  'error'
+)
+            
+            finalizarAguardar();
+            return false;
         } else if (senhaVar.length < 4) {
-            mensagem_erro1.innerHTML = 'Senha muito curta, utilize pelo menos 4 caracteres.'
+            Swal.fire(
+  'Sua senha não esta segura!',
+  'Senha muito curta, utilize pelo menos 4 caracteres.',
+  'error'
+)
+           
             finalizarAguardar();
             return false;
         }
         else if (senhaVar != confirmacaoSenhaVar) {
-            mensagem_erro1.innerHTML = 'As senhas inseridas devem ser iguais para prosseguir.'
+            Swal.fire(
+  'Sua confirmação esta diferente',
+  'As senhas inseridas devem ser iguais para prosseguir.',
+  'error'
+)
             finalizarAguardar();
             return false;
 
         } else if (cepVar.length < 8) {
-            mensagem_erro1.innerHTML = 'Coloque um cep valido para prosseguir.'
+            Swal.fire(
+  'Ops',
+  'Coloque um cep valido para prosseguir.',
+  'error'
+)
+            
             finalizarAguardar();
             return false;
-        }else {
+ } else {
             setInterval(sumirMensagem, 5000)
         }
 
@@ -248,9 +285,13 @@ btn.addEventListener('click', function() {
             if (resposta.ok) {
 
 
-                cardErro.style.display = "block";
-                
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Cadastro realizado com sucesso!',
+  showConfirmButton: false,
+  timer: 1500
+})
 
                 setTimeout(() => {
                     window.location = "login.html";

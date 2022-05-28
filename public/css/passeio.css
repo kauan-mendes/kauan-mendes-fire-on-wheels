@@ -5,7 +5,8 @@ body {
   background-image: url("https://wallpaperaccess.com/full/7202890.jpg");
   font-family: "Exo 2", sans-serif;
   background-size: cover;
-  transition: 1.8s;
+  transition: 1s;
+  object-fit: cover;
   
 }
 nav {

@@ -4,10 +4,11 @@
     padding: 0;
     background-image: linear-gradient(
         to right,
-        #1d043d 0%,
-        #14031d 51%,
-        #0f0120 100%
+        #260246 0%,
+        #250303 40%,
+        #db0404 200%
       );
+      overflow-x: hidden;
   }
   
   .agora{
@@ -86,6 +87,8 @@ ul {
     width: 100%;
     height: 70vh;
     margin-top: 3%;
+    
+    
   }
   .container1 {
     width: 90%;
@@ -93,16 +96,28 @@ ul {
     display: flex;
     align-items: center;
     margin: auto;
+    
+    
   }
   .div1 {
     width: 45%;
-    height: 85%;
-  }
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 6%;
+ background-image: url("https://2.bp.blogspot.com/-nW9kkxgZ7vE/UOOt-H7QG-I/AAAAAAABWGo/AmcuNgwrQAI/s400/1+Convite10.jpg");
+background-repeat: no-repeat;  
+}
+
+
   .imagem1 {
-    width: 100%;
-    height: 50%;
-    margin-top: 25%;
-    border-radius: 20px;
+    width: 67.0%;
+    height: 54.1%;
+    margin-top: 2.5%;
+    
+    margin-left: 3.1%;
+    
+   
+    
   }
   h1 {
     color: #ffffff;
@@ -112,20 +127,30 @@ ul {
   }
   .container_text {
     color: white;
-    width: 100%;
-    margin-left: 2%;
+    width: 66.9%;
+  height: 100%;
+    margin-left: 9%;
     line-height: 2.6rem;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/071d458b-55d5-44bc-b5ba-dda674f4038b/d7o2n01-ed39e01e-7f62-4c52-a260-c46690f6af19.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA3MWQ0NThiLTU1ZDUtNDRiYy1iNWJhLWRkYTY3NGY0MDM4YlwvZDdvMm4wMS1lZDM5ZTAxZS03ZjYyLTRjNTItYTI2MC1jNDY2OTBmNmFmMTkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.y-liWl4sOkbzlpqkqRIytaB89G-m22EFOf-8BBYt1R4");
+    background-repeat: no-repeat;
+    
   }
   .container_text p {
     font-size: 20px;
     text-align: justify;
+    margin-top: 5.9%;
+    margin-right: 53%;
+    margin-left: 5%;
   }
  
   .divengloba2 {
     
     width: 100%;
     height: 40vh;
-    margin-top: -4%;
+    margin-top: 13%;
   }
   .container2 {
     width: 90%;

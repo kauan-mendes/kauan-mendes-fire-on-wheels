@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="js/login.js"></script>
 <script src="js/funcoes.js"></script>
 <body>
@@ -54,16 +55,16 @@
                     <i class="uil uil-eye"></i>
                 </div>
                 <button onclick="entrar()"  class="btnlogin">Login</button>
+                
+
+                <div id="div_aguardar" class="loading-div">
+                    <img src="https://media0.giphy.com/media/L1d4e47pZJShRGgbnz/giphy.gif?cid=4d1e4f299723828b0db4776460e8484b3ffb26d5147340ea&rid=giphy.gif" id="loading-gif">
+                </div>
                 <form>
                     <span style="color: white;"> Não é membro?</span>
                     <a href="cadastro.html" class="signup-text"><span style="color: rgb(255, 34, 0);">Cadastre-se
                             agora</span></a>
                 </form>
-
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
-
                 <div id="div_erros_login">
 
                 </div>
@@ -107,10 +108,13 @@ function entrar() {
 
     var emailVar = input_email.value;
     var senhaVar = input_senha.value;
-
+    mensagem_erro.innerHTML = "";
     if (emailVar == "" || senhaVar == "") {
-        cardErro.style.display = "block"
-        mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        Swal.fire(
+  'Digitou certo?',
+  'Email ou senha invalido',
+  'error'
+)
         finalizarAguardar();
         return false;
     }
