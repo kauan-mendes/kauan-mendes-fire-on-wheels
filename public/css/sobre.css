@@ -150,7 +150,7 @@ background-repeat: no-repeat;
     
     width: 100%;
     height: 40vh;
-    margin-top: 13%;
+    margin-top: 28%;
   }
   .container2 {
     width: 90%;
@@ -161,24 +161,37 @@ background-repeat: no-repeat;
     margin-top: 4%;
     flex-direction: row-reverse;
   }
-  .div_jogabilidade {
-    width: 40%;
-    height: 85%;
+  .div2 {
+    width: 100%;
+    height: 110%;
+    margin-left: 6%;
+ background-image: url("https://2.bp.blogspot.com/-nW9kkxgZ7vE/UOOt-H7QG-I/AAAAAAABWGo/AmcuNgwrQAI/s400/1+Convite10.jpg");
+background-repeat: no-repeat;  
   }
   .imagem2 {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
+    width: 65.6%;
+    height: 85.4%;
+    margin-left: 3%;
+        margin-top: 3%;
+    
   }
   .conteiner_texto2 {
     color: white;
     width: 100%;
-    margin-right: 2%;
-    line-height: 2.5rem;
+    height: 300%;
+    margin-right: 1.9%;
+    line-height: 2.2rem;
+    
+   
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/071d458b-55d5-44bc-b5ba-dda674f4038b/d7o2n01-ed39e01e-7f62-4c52-a260-c46690f6af19.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA3MWQ0NThiLTU1ZDUtNDRiYy1iNWJhLWRkYTY3NGY0MDM4YlwvZDdvMm4wMS1lZDM5ZTAxZS03ZjYyLTRjNTItYTI2MC1jNDY2OTBmNmFmMTkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.y-liWl4sOkbzlpqkqRIytaB89G-m22EFOf-8BBYt1R4");
+    background-repeat: no-repeat;
   }
   .conteiner_texto2 p {
     font-size: 20px;
     text-align: justify;
+    margin-top: 5.9%;
+    margin-right: 23%;
+    margin-left: 7%;
   }
  
   .divengloba3 {
@@ -215,6 +228,7 @@ background-repeat: no-repeat;
   }
   
  .imgtext{
+   margin-top: 15%;
 margin-left: 38%;
 
  }
