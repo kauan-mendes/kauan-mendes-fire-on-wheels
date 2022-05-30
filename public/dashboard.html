@@ -31,7 +31,7 @@
 	<span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >☰ Dashwheels</span>
 	</div>
 	<div class="hello">
-		<h3>Olá, <span id="b_usuario">usuário</span>, seja bem vindo de volta!</h3>
+		<h3>Olá, <span id="b_usuario">usuário</span>, Veja o atual estado dos graficos!</h3>
 	</div>
 		
 		<div class="col-div-6">
@@ -40,40 +40,32 @@
 	</div>
 		<div class="clearfix"></div>
 	</div>
-
+	<div class="col-div-3">
+		<div class="box">
+			<p>Esta é a media de motos escolhidas</p>
+			
+		</div>
+	</div>
 		<div class="clearfix"></div>
 		<br/>
+		<div class="main_grafico">
+			<div class="grafico1">
+				<canvas id="CJS"></canvas>
+			</div>
 		
-		<div class="col-div-3">
-			<div class="box">
-				<p>26<br/><span>Membros</span></p>
-				<i class="uil uil-users-alt"></i>
+			<div class="grafico2">
+				<canvas id="CJSbarra"></canvas>
 			</div>
-		</div>
-		<div class="col-div-3">
-			<div class="box">
-				<p>9<br/><span>Bairros</span></p>
-				<i class="uil uil-map-marker"></i>
-			</div>
-		</div>
-		<div class="col-div-3">
-			<div class="box">
-				<p>40<br/><span>Passeios</span></p>
-				<i class="uil uil-map-pin"></i>
-			</div>
-		</div>
-		<div class="col-div-3">
-			<div class="box">
-				<p>78<br/><span>Motos</span></p>
-				<img style="position: absolute;width: 20px;margin-top:4.7%;margin-left: 6px" src="https://cdn-icons-png.flaticon.com/512/27/27176.png" alt="">
-			</div>
-		</div>
+		</div> <br>
+		
+		
+	
 		<div class="clearfix"></div>
 		<br/><br/>
 		<div class="col-div-8">
 			<div class="box-8">
 			<div class="content-box">
-				<p>Melhores motos para passeios <span>Sell All</span></p>
+				<p>Melhores motos para passeios </p>
 				<br/>
 				<table>
 	  <tr>
@@ -99,37 +91,11 @@
 		</div>
 		</div>
 
-		<div class="col-div-4">
-			<div class="box-4">
-			<div class="content-box">
-				
-			
-				<div class="circle-wrap">
-	    <div class="circle">
-	      <div class="mask full">
-	        <div class="fill"></div>
-	      </div>
-	      <div class="mask half">
-	        <div class="fill"></div>
-	      </div>
-	      <div class="inside-circle"> 70% </div>
-	    </div>
-	  </div>
-			</div>
-		</div>
-		</div>
+		
 			
 		<div class="clearfix"></div>
 	</div>
-	<div class="main-grafico">
-	<div style="position: relative; width:35vw">
-		<canvas id="CJS"></canvas>
-	</div>
-
-	<div style="position: relative; width:35vw">
-		<canvas id="CJSbarra"></canvas>
-	</div>
-</div>
+	
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -150,6 +116,14 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 	     $(".icons").css('margin-left', '-8px');
 	      $(".nav").css('display','none');
 	      $(".nav2").css('display','block');
+		  $(".box").css('width','85.4%');
+		  $(".main_grafico").css('width','100.0%');
+		  $(".main_grafico").css('height','40.0%');
+		  $(".grafico1").css('width','47vw');
+		  $(".grafico2").css('width','47vw');
+		  $(".hello").css('margin-right','60%');
+		  $(".hello").css('margin-left','-6%');
+		  
 		  
 	  });
 
@@ -161,6 +135,13 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 	     $(".icons").css('visibility', 'visible');
 	     $(".nav").css('display','block');
 	      $(".nav2").css('display','none');
+		  $(".box").css('width','85.0%');
+		  $(".main_grafico").css('width','100.0%');
+		  $(".grafico1").css('width','37vw');
+		  $(".grafico2").css('width','37vw');
+		  $(".hello").css('margin-right','55%');
+		  $(".hello").css('margin-left','-4%');
+		  
 		  
 	 });
 
