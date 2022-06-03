@@ -81,6 +81,7 @@ body::-webkit-scrollbar-thumb {
 .col-div-3{
 	width: 115.3%;
 	margin-left: -1%;
+  transition: 0.7s;
 }
 .box{
 	width: 85%;
@@ -113,6 +114,7 @@ body::-webkit-scrollbar-thumb {
 .col-div-8{
 	width: 70%;
 	float: left;
+  transition: 0.7s;
 }
 .col-div-4{
 	width: 30%;
@@ -135,7 +137,9 @@ body::-webkit-scrollbar-thumb {
 .box-8, .box-4{
 	width: 95%;
 	background-color: #272c4a;
-	height: 330px;
+	height: 200px;
+  margin-top: -6%;
+  
 	
 }
 .nav2{
@@ -162,20 +166,23 @@ td, th {
   background-color: #272c4a;
   height: 250px;
   width: 100%;
-  
+ 
   
 }
 .grafico1{
   position: relative; 
   width:37vw;
-  border-right: 2px solid rgb(65, 31, 255);
+  border-right: 10px solid #1b203d;
+  transition: 0.7s;
+ 
 
 }
 .grafico2{
   position: relative; 
   width:37vw;
+  transition: 0.7s;
 
-
+ 
 }
 
 
@@ -232,6 +239,7 @@ td, th {
   justify-content: center;
   margin-right: 50%;
   margin-top: 5%;
+  transition: 0.9s;
 }
 
 .hello h3 {

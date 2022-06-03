@@ -12,7 +12,12 @@ insert into moto values
 (null,'Kawasaki Z750'),
 (null,'Yamaha MT-07'),
 (null,'Yamaha XJ6'),
-(null,'Honda CB 500F');
+(null,'Harley Davidson'),
+(null,'Suzuki burgman'),
+(null,'BMW F 800'),
+(null,'XVS Midnight start'),
+(null,'Triumph bonneville'),
+(null,'Kawasaki Ninja H2R');
 
 
 CREATE TABLE usuario(
