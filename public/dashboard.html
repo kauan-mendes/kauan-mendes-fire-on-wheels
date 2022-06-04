@@ -9,18 +9,19 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 		<link rel="icon" href="../public/assets/Logos/v1.png ">
+		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 	</head>
     <!DOCTYPE html>
 
-	<body>
+	<body onload="votos()">
 		
 		<div id="mySidenav" class="sidenav">
 		<p class="logo"><span>F</span>ire on wheels</p>
 		
-	  <a href="#" class="icon-a"><i class="fa fa-dashboard icons"></i>   Dashwheels</a>
-	  <a href="passeio.html"class="icon-a"><i class="fa fa-users icons"></i>   Consultar passeios</a>
-	  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-	  <a href="login.html"class="icon-a"><i class="fa fa-list-alt icons"></i>   Sair</a>
+		<a href="#" class="icon-a"><i class="uil uil-chart-growth"></i> Dashwheels</a>
+		<a href="passeio.html"class="icon-a"><i class="fa fa-users icons"></i>  Consultar passeios</a>
+		<a href="curiosidades.html"class="icon-a"><i class="fa fa-dashboard icons"></i>  Curiosidades</a>
+		<a href="login.html"class="icon-a"><i class="fa fa-list-alt icons"></i>   Sair</a>
 
 	</div>
 	<div id="main">
@@ -145,7 +146,75 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 		  
 	 });
 
-	 const labels = [
+	
+	function graficos1(){
+    const data = {
+        labels: [],
+        datasets: [{
+            label: 'Moto ',
+            backgroundColor: '#f7403b',
+            borderColor: '#63247e',
+            data: []
+			
+        }
+    ]
+    };
+	data.labels.push(nome_moto1)
+      data.datasets[0].data.push(qtd_votos1)
+ 
+    if (qtd_votos2 > 0) {
+      data.labels.push(nome_moto2)
+      data.datasets[0].data.push(qtd_votos2)
+    }
+	if (qtd_votos3 > 0) {
+      data.labels.push(nome_moto3)
+      data.datasets[0].data.push(qtd_votos3)
+    }
+	if (qtd_votos4 > 0) {
+      data.labels.push(nome_moto4)
+      data.datasets[0].data.push(qtd_votos4)
+    }
+	if (qtd_votos5 > 0) {
+      data.labels.push(nome_moto5)
+      data.datasets[0].data.push(qtd_votos5)
+    }
+	if (qtd_votos6 > 0) {
+      data.labels.push(nome_moto6)
+      data.datasets[0].data.push(qtd_votos6)
+    }
+	if (qtd_votos7 > 0) {
+      data.labels.push(nome_moto7)
+      data.datasets[0].data.push(qtd_votos7)
+    }
+	if (qtd_votos8 > 0) {
+      data.labels.push(nome_moto8)
+      data.datasets[0].data.push(qtd_votos8)
+    }
+	if (qtd_votos9 > 0) {
+      data.labels.push(nome_moto9)
+      data.datasets[0].data.push(qtd_votos9)
+    }
+	if (qtd_votos10 > 0) {
+      data.labels.push(nome_moto10)
+      data.datasets[0].data.push(qtd_votos10)
+    }
+	const config = {
+        type: 'bar',
+        data: data,
+        options: {}
+    };
+  
+    const CJSbarra = new Chart(
+        document.getElementById('CJSbarra'),
+        config
+    );
+	
+}
+
+
+
+function graficos2(){}
+const labels2 = [
         '12:00',
         '13:00',
         '14:00',
@@ -154,65 +223,138 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
         '17:00',
     ];
 
-    const data = {
-        labels: labels,
+    const data2= {
+        labels: labels2,
         datasets: [{
             label: 'Passeios',
-            backgroundColor: '#63247e',
-            borderColor: '#63247e',
-            data: [20+10, 30-1, 40-12, 50-25, 60-38, 70-47, 80, 90],
-        },{
-            label: 'Moto',
             backgroundColor: '#f7403b',
             borderColor: '#f7403b',
-            data: [20+60, 30+58, 40+40, 50+35, 60+20, 70+13, 80, 90],
-        },
-    ]
-    };
-    const config = {
-        type: 'line',
-        data: data,
-        options: {}
-    };
-    //Finzaliza aqui o grafico 1
-    
-    const labels2 = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-    ];
-
-    const data2 = {
-        labels: labels,
-        datasets: [{
-            label: 'Passeios ',
-            backgroundColor: '#63247e',
-            borderColor: '#f7403b',
-            data: [20+2, 30-6, 40-13, 50-27, 60-20, 70-52, 80, 90],
-        },{
-            label: 'Moto ',
-            backgroundColor: '#f7403b',
-            borderColor: '#63247e',
-            data: [20+70, 30+59, 40+53, 50+37, 60+28, 70+12, 80, 90],
-        },
+            data: [23,55,12,45],
+        }
     ]
     };
     const config2 = {
-        type: 'bar',
+        type: 'line',
         data: data2,
         options: {}
     };
 	const CJS = new Chart(
         document.getElementById('CJS'),
-        config
-    );
-    const CJSbarra = new Chart(
-        document.getElementById('CJSbarra'),
         config2
     );
+	
+	
+
+
+	    var qtd_votos1 = 0;
+        var qtd_votos2 = 0;
+        var qtd_votos3 = 0;
+		var qtd_votos4 = 0;
+        var qtd_votos5 = 0;
+        var qtd_votos6 = 0;
+		var qtd_votos7 = 0;
+        var qtd_votos8 = 0;
+        var qtd_votos9 = 0;
+		var qtd_votos10 = 0;
+      
+
+
+        var nome_moto1 = "";
+        var nome_moto2 = "";
+        var nome_moto3 = "";
+		var nome_moto4 = "";
+        var nome_moto5 = "";
+        var nome_moto6 = "";
+		var nome_moto7 = "";
+        var nome_moto8 = "";
+        var nome_moto9 = "";
+		var nome_moto10 = "";
+
+
+		var qtd_agenda = 0
+        var nome_usuario = ""
+
+		Chart.defaults.color = "#FFF"
+function votos(){
+fetch("/usuarios/puxarMoto").then(function (resposta) {
+    if (resposta.ok) {
+
+        resposta.json().then(function (resposta) {
+            console.log("Dados recebidos: ", JSON.stringify(resposta));
+            var teste = resposta
+            qtd_votos1 = resposta[0].qtdVotos;
+            nome_moto1= resposta[0].nomeMoto;
+
+            if (resposta[1]) {
+                qtd_votos2  = resposta[1].qtdVotos;
+                nome_moto2 = resposta[1].nomeMoto;
+            }
+            if (resposta[2]) {
+                qtd_votos3  = resposta[2].qtdVotos;
+                nome_moto3 = resposta[2].nomeMoto;
+            }
+			if (resposta[3]) {
+                qtd_votos4  = resposta[3].qtdVotos;
+                nome_moto4 = resposta[3].nomeMoto;
+            }
+			if (resposta[4]) {
+                qtd_votos5  = resposta[4].qtdVotos;
+                nome_moto5 = resposta[4].nomeMoto;
+            }
+			if (resposta[5]) {
+                qtd_votos6  = resposta[5].qtdVotos;
+                nome_moto6 = resposta[5].nomeMoto;
+            }
+			if (resposta[6]) {
+                qtd_votos7  = resposta[6].qtdVotos;
+                nome_moto7 = resposta[6].nomeMoto;
+            }
+			if (resposta[7]) {
+                qtd_votos8  = resposta[7].qtdVotos;
+                nome_moto8 = resposta[7].nomeMoto;
+            }
+			if (resposta[8]) {
+                qtd_votos9  = resposta[8].qtdVotos;
+                nome_moto9 = resposta[8].nomeMoto;
+            }
+			if (resposta[9]) {
+                qtd_votos10  = resposta[9].qtdVotos;
+                nome_moto10 = resposta[9].nomeMoto;
+            }
+
+
+
+
+            graficos1()
+        });
+    } else {
+        throw ('Houve um erro na API!');
+    }
+}).catch(function (resposta) {
+    console.error(resposta);
+});
+
+}
+
+function agenda(){
+fetch("/usuarios/puxarAgenda").then(function (resposta) {
+    if (resposta.ok) {
+
+        resposta.json().then(function (resposta) {
+            console.log("Dados recebidos: ", JSON.stringify(resposta));
+            var teste = resposta
+            qtd_agenda = resposta[0].qtdPasseios;
+            nome_usuario= resposta[0].nomeUsuario;
+			graficos2()
+        });
+    } else {
+        throw ('Houve um erro na API!');
+    }
+}).catch(function (resposta) {
+    console.error(resposta);
+});
+
+}
 
 	</script>
 

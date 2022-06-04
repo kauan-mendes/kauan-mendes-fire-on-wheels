@@ -20,4 +20,12 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
+router.get("/puxarMoto", function (req, res) {
+    usuarioController.puxarMoto(req, res);
+});
+
+router.get("/puxarAgenda", function (req, res) {
+    usuarioController.puxarMoto(req, res);
+});
+
 module.exports = router;
