@@ -1,0 +1,103 @@
+body {
+    background-color: #08090e;
+    font-family: "Exo 2", sans-serif;
+    background-image: url('https://www.10wallpaper.com/wallpaper/1366x768/1203/Honda-Very_cool_motorcycle_wallpaper_1366x768.jpg');
+   margin: 0;
+    background-repeat: no-repeat;
+  
+  }
+  
+  nav {
+  
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: rgb(225, 225, 225);
+    text-decoration: none;
+    background-color: #1b203d;
+    
+  }
+  
+  h1,
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 8px;
+  }
+  
+  nav ul {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  li {
+    padding: 0 25px;
+    transition: .7s;
+  }
+  
+  li:hover,
+  .h1:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  
+    border-radius: 5px;
+    transform: translatex(-10px);
+  
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    transition: all .5s;
+  }
+
+  .divdireita  {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6%;
+}
+
+.card{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    margin-top: -25%;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 40.6);
+    background: rgba(206, 16, 16, 0.644);
+    box-shadow: 8px 8px 22px 20px rgba(0, 0, 0, 0.427);
+}
+#textarea_descricao{
+    width: 400px;
+    background-color: #ffffff28;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+button{
+background-color: #ff2d2d;
+cursor: pointer;
+transition: 0.7s;
+border: none;
+
+}
+
+button:hover{
+    background-color: red;
+    color: white;
+
+}
+label{
+    color: aliceblue;
+}

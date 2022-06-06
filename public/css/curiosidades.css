@@ -1,8 +1,102 @@
 body {
-    background-color: #08090e;
-    font-family: "Exo 2", sans-serif;
-    background-image: url('https://s1.1zoom.me/b6353/461/Yamaha_2017_MT-07_Moto_Cage_Night_Moon_515846_1366x768.jpg');
-   overflow-y: hidden;
-    background-repeat: no-repeat;
+  background-color: #08090e;
+  font-family: "Exo 2", sans-serif;
+  background-image: url('https://s1.1zoom.me/b6353/461/Yamaha_2017_MT-07_Moto_Cage_Night_Moon_515846_1366x768.jpg');
+ margin: 0;
+  background-repeat: no-repeat;
+
+}
+
+nav {
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: rgb(225, 225, 225);
+  text-decoration: none;
+  background-color: #1b203d;
   
-  }
+}
+
+h1,
+a {
+  color: white;
+  text-decoration: none;
+  padding: 0px 8px;
+}
+
+nav ul {
+  align-items: center;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  padding: 0 25px;
+  transition: .7s;
+}
+
+li:hover,
+.h1:hover {
+  cursor: pointer;
+  opacity: 0.8;
+
+  border-radius: 5px;
+  transform: translatex(-10px);
+
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+  transition: all .5s;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textomain{
+  color: white;
+}
+.mainbutton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin: 0px;
+  margin-left: 28px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.logo span {
+  color: #f7403b;
+}
+
+
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* cor de fundo do scroll */
+body::-webkit-scrollbar-track {
+  background: #201b2c;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(72deg, #710d06 10%, #ff1919 99%);
+  border-radius: 6px;
+  /* roundness of the scroll thumb */
+  border: 1px solid #e5e5e5;
+}
+

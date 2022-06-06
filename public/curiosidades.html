@@ -9,7 +9,7 @@
     <title>Passeio | Avisos</title>
 
 
-   <link rel="stylesheet" href="curiosidades.css">
+    <link rel="stylesheet" href="./css/curiosidades.css">
     <script src="../js/funcoes.js"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -38,13 +38,12 @@
 
     </nav>
     </header>
- 
-
-    <input id="link" >
-<button onclick="enviar()">Enviar</button>
-
+    <div class="mainbutton">
+    <input id="link" > <br>
+    <button onclick="enviar()">Publicar</button></div>
+ <div class="main">
 <div id="mostrar"></div>
-    
+</div>
 
 
 
@@ -86,7 +85,7 @@ fetch("/usuarios/enviarFoto", {
                 Swal.fire({
   position: 'center',
   icon: 'success',
-  title: 'Cadastro realizado com sucesso!',
+  title: 'Foto postada com sucesso!',
   showConfirmButton: false,
   timer: 1500
 })
@@ -118,11 +117,9 @@ function buscarFoto(){
 
 for (var contador = resposta.length -1; contador >= 0; contador--){
 
-    mostrar.innerHTML += `<p>
-        Dono ${resposta[contador].nome}
-        </p>
-        
-        <img src="${resposta[contador].foto}"> <br>` 
+    mostrar.innerHTML += `<p class="textomain">
+        Publicado por ${resposta[contador].nome} </p>     
+        <img style="width: 500px;height:600px" src="${resposta[contador].foto}"> <br>` 
     
 
 

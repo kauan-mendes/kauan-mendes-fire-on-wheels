@@ -8,100 +8,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AcquaTec | Página Inicial</title>
 
- 
+    <link rel="stylesheet" href="./css/editar.css">
     <script src="../js/funcoes.js"></script>
-
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body onload="listarInfosDeUm()" style="background-color: #161618;">
     <!-- <body onload="validarSessao()"> -->
 
-    <div class="janela">
-
-
-        <div class="header-left">
-
-            <h1>AcquaTec</h1>
+        <nav>
+            <a href="index.html">
+                <img style="height: 57px;width: 100px; margin-left: 50%;"
+                    src="https://cdn.pixabay.com/photo/2012/04/02/12/37/motorcycle-24371_1280.png">
+            </a>
+    
+            <ul>
+     
+                <li> <a href="dashboard.html"><i class="uil uil-angle-left-b"></i>Dashwheels</a></li>
+                <li> <a href="passeio.html"><i class="uil uil-angle-left-b"></i>Passeios</a></li>
+                <li> <a href="curiosidades.html"><i class="uil uil-angle-left-b"></i>Curiosidades</a></li>
+                <li> <a href="login.html"> Sair <i class="uil uil-signout"></i></a></li>
+    
+            </ul>
+    
+        </nav>
+        </header>
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
 
-            <div class="btn-nav-white">
-                <a href="cards.html">
-                    <h3>Aquários</h3>
-                </a>
-            </div>
+        <div class="divdireita ">
 
-            <div class="btn-nav-white">
-                <a href="./dashboard.html">
-                    <h3>Gráficos</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de passeio</h3>
-                </a>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
-        </div>
-
-        <div class="dash-right">
-
-            <div class="passeio">
-                <div class="container">
-                    <h1>Editar um aviso</h1>
+            <div class="card">
+                
+                    <h1>Editar uma agenda</h1>
                     <div class="div-form">
+                        
                         <label>
-                            ID:
-                            <br>
-                            <input id="input_id" maxlength="100" type="text" style="color: rgb(196, 196, 196)" disabled>
-                        </label>
-                        <label>
-                            Autor:
-                            <br>
-                            <input id="input_nome" maxlength="100" type="text" style="color: rgb(196, 196, 196)"
-                                disabled>
-                        </label>
-                        <label>
-                            Título:
-                            <br>
-                            <input id="input_titulo" maxlength="100" type="text" style="color: rgb(196, 196, 196)"
-                                disabled>
-                        </label>
-                        <br>
-                        <label>
-                            Descrição (máximo de 250 caracteres):
+                            Descrição (Data/Hora/Local):
                             <br>
                             <textarea id="textarea_descricao" maxlength="250" rows="5"></textarea>
                         </label>
                         <br>
-                        <button onclick="editar()">Editar</button>
+                        <button onclick="editar()">Salvar alterações</button>
                     </div>
-
-                </div>
             </div>
         </div>
-    </div>
+    
 </body>
 
 </html>
 
 <script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     function listarInfosDeUm() {
         console.log("Criar função de trazer informações de post escolhido");
     }
 
     function editar() {
+        var nomeUsuario = sessionStorage.NOME_USUARIO;
+        var idUsuario = sessionStorage.ID_USUARIO;
         fetch(`/avisos/editar/${sessionStorage.getItem("ID_POSTAGEM_EDITANDO")}`, {
             method: "PUT",
             headers: {
@@ -113,9 +85,12 @@
         }).then(function (resposta) {
 
             if (resposta.ok) {
-                window.alert("Post atualizado com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
-                window.location = "/dashboard/mural.html"
+               
+           
+                window.alert("Agenda atualizada com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
+                window.location = "passeio.html"
             } else if (resposta.status == 404) {
+                
                 window.alert("Deu 404!");
             } else {
                 throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
