@@ -24,8 +24,8 @@ router.get("/puxarMoto", function (req, res) {
     usuarioController.puxarMoto(req, res);
 });
 
-router.get("/puxarAgenda", function (req, res) {
-    usuarioController.puxarMoto(req, res);
+router.get("/puxarVelocidade", function (req, res) {
+    usuarioController.puxarVelocidade(req, res);
 });
 
 module.exports = router;

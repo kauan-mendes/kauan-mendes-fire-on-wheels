@@ -1,3 +1,4 @@
+
 CREATE DATABASE fireonwheels;
 
 USE fireonwheels;
@@ -19,6 +20,14 @@ INSERT INTO moto VALUES
 (NULL,'Triumph bonneville'),
 (NULL,'Kawasaki Ninja H2R');
 
+CREATE TABLE velocidade(
+idVelocidade INT PRIMARY KEY AUTO_INCREMENT,
+nomeVelocidade VARCHAR(255)
+);
+INSERT INTO velocidade VALUES
+(NULL,'Lenta'),
+(NULL,'Media'),
+(NULL,'Rapida');
 
 
 
@@ -31,16 +40,18 @@ bairroUsuario VARCHAR(255),
 emailUsuario VARCHAR(255),
 senhaUsuario VARCHAR(255),
 fk_moto INT,
-FOREIGN KEY(fk_moto)REFERENCES moto (idMoto)
+FOREIGN KEY(fk_moto)REFERENCES moto (idMoto),
+fk_velocidade INT, 
+FOREIGN KEY(fk_velocidade)REFERENCES velocidade (idVelocidade)
 );
 
 INSERT INTO usuario VALUES
- (NULL,'Bruno',08532120,'Ferraz','Tanquinho','bruno@gmail.com','bruno123',1),
- (NULL,'Kauan',27235173,'Sao Matheus','Tanquinho','kauan@gmail.com','kauan123',1),
- (NULL,'Soares',02746127,'Tiradentes','Vl margarida','soares@gmail.com','soares123',2),
- (NULL,'Noleto',624123612,'Paulista','Jd tv','noleto@gmail.com','noleto123',3),
- (NULL,'Caxixi',02836127,'Osasco','Gianetti','caxixi@gmail.com','caxixi123',4),
- (NULL,'Wagner',02738128,'Tatuapé','Jd dourado','wagner@gmail.com','wagner123',1);
+ (NULL,'Bruno',08532120,'Ferraz','Tanquinho','bruno@gmail.com','bruno123',1,1),
+ (NULL,'Kauan',27235173,'Sao Matheus','Tanquinho','kauan@gmail.com','kauan123',1,2),
+ (NULL,'Soares',02746127,'Tiradentes','Vl margarida','soares@gmail.com','soares123',2,3),
+ (NULL,'Noleto',624123612,'Paulista','Jd tv','noleto@gmail.com','noleto123',3,2),
+ (NULL,'Caxixi',02836127,'Osasco','Gianetti','caxixi@gmail.com','caxixi123',4,2),
+ (NULL,'Wagner',02738128,'Tatuapé','Jd dourado','wagner@gmail.com','wagner123',1,2);
 
 
 CREATE TABLE passeio(
@@ -82,8 +93,17 @@ ON a.fk_usuarioHost = u.idUsuario;
             
 SELECT 
 nomeMoto, COUNT(nomeMoto)
-FROM moto 
+FROM
+moto
 GROUP BY nomeMoto;
+
+SELECT 
+nomeVelocidade, COUNT(nomeVelocidade)
+FROM
+velocidade
+GROUP BY nomeVelocidade;
+
+
 
 
 SELECT 
@@ -93,8 +113,5 @@ JOIN usuario
 ON idUsuario = fk_usuarioHost 
 GROUP BY fk_usuarioHost
 ORDER BY COUNT(id) desc;
-
-
-
 
 

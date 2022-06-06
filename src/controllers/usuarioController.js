@@ -69,6 +69,7 @@ function cadastrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
     var moto = req.body.motoServer;
+    var velocidade = req.body.velocidadeServer;
 
 
 
@@ -82,7 +83,7 @@ function cadastrar(req, res) {
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, cep, cidade, bairro, email, senha, moto)
+        usuarioModel.cadastrar(nome, cep, cidade, bairro, email, senha, moto, velocidade)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -116,8 +117,8 @@ function puxarMoto(req, res) {
             }
         );
 }
-function puxarAgenda(req, res) {
-    usuarioModel.puxarAgenda()
+function puxarVelocidade(req, res) {
+    usuarioModel.puxarVelocidade()
         .then(function (resultado) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado);
@@ -140,5 +141,5 @@ module.exports = {
     listar,
     testar,
     puxarMoto,
-    puxarAgenda
+    puxarVelocidade
 }

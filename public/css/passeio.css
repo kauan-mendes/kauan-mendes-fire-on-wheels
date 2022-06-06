@@ -181,7 +181,7 @@ label{
 .dd {
   display: flex;
   width: 54.6%;
-  border: #b62525 40px ridge;
+  border: #b62525 16px ridge;
   height: fit-content;
   
   background: rgba(0, 0, 0, 0.1);

@@ -66,6 +66,16 @@
                         <option value="10">Kawasaki Ninja H2R</option>
                       </select>
                     </div>
+                    <div class="textfield">
+                        <label for="senha">Velocidade preferida</label>
+                        <img style="width: 18px;position: absolute;margin-top: 14px;margin-left: 3px;" src="https://cdn-icons-png.flaticon.com/512/1311/1311846.png" alt="">
+                        <select id="select_velocidade">
+                            <option value="nada">Selecione</option>
+                            <option value="1">Lenta</option>
+                            <option value="2">Média</option>
+                            <option value="3">Rapida</option>
+                          </select>
+                        </div>
 
 
                 <div class="textfield">
@@ -186,6 +196,8 @@ btn.addEventListener('click', function() {
         var confirmacaoSenhaVar = input_confirmasenha.value
         var motoVar = Number(select_moto.value)
         var motoVarValidacao = select_moto.value
+        var velocidadeVar = Number(select_velocidade.value)
+        var velocidadeValidacao = select_velocidade.value
 
         mensagem_erro.innerHTML = ``
 
@@ -197,7 +209,8 @@ btn.addEventListener('click', function() {
             cepVar == '' ||
             cidadeVar == '' ||
             bairroVar == '' ||
-            motoVar == ''
+            motoVar == '' ||
+            velocidadeVar == ''
 
         ) 
         {
@@ -254,6 +267,15 @@ btn.addEventListener('click', function() {
             
             finalizarAguardar();
             return false;
+ }else if (velocidadeValidacao == "nada") {
+            Swal.fire(
+  'Ops',
+  'Escolha sua velocidade favorita.',
+  'error'
+)
+            
+            finalizarAguardar();
+            return false;
  } else {
             setInterval(sumirMensagem, 5000)
         }
@@ -274,7 +296,8 @@ btn.addEventListener('click', function() {
                 bairroServer: bairroVar, 
                 emailServer: emailVar, 
                 senhaServer: senhaVar,
-                motoServer: motoVar
+                motoServer: motoVar,
+                velocidadeServer: velocidadeVar
                 
 
                 

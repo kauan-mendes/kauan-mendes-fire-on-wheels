@@ -13,12 +13,12 @@
 	</head>
     <!DOCTYPE html>
 
-	<body onload="votos()">
+	<body onload="votos(),velocidade()">
 		
 		<div id="mySidenav" class="sidenav">
 		<p class="logo"><span>F</span>ire on wheels</p>
 		
-		<a href="#" class="icon-a"><i class="uil uil-chart-growth"></i> Dashwheels</a>
+	
 		<a href="passeio.html"class="icon-a"><i class="fa fa-users icons"></i>  Consultar passeios</a>
 		<a href="curiosidades.html"class="icon-a"><i class="fa fa-dashboard icons"></i>  Curiosidades</a>
 		<a href="login.html"class="icon-a"><i class="fa fa-list-alt icons"></i>   Sair</a>
@@ -41,12 +41,34 @@
 	</div>
 		<div class="clearfix"></div>
 	</div>
-	<div class="col-div-3">
-		<div class="box">
-			<p>Esta é a media de motos escolhidas</p>
-			
-		</div>
-	</div>
+    <div class="col-div-8">
+        <div class="box">
+        <div class="content-box">
+            <p>Suas informações</p>
+            <br/>
+            <table>
+  <tr>
+    <th>Seu nomeㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+    <th>Velocidade preferidaㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+    <th>Moto preferida</th>
+  </tr>
+  <tr>
+    <td id="td_nome"></td>
+    <td id="td_velocidade"></td>
+    <td id="td_moto"></td>
+  </tr>
+  
+
+  
+  
+</table>
+
+
+        </div>
+        
+        
+    </div>
+    </div>
 		<div class="clearfix"></div>
 		<br/>
 		<div class="main_grafico">
@@ -63,34 +85,7 @@
 	
 		<div class="clearfix"></div>
 		<br/><br/>
-		<div class="col-div-8">
-			<div class="box-8">
-			<div class="content-box">
-				<p>Melhores motos para passeios </p>
-				<br/>
-				<table>
-	  <tr>
-	    <th>Nome</th>
-	    <th>Motivo</th>
-	    <th>Tipo</th>
-	  </tr>
-	  <tr>
-	    <td id="td_nome"></td>
-	    <td>Estabilidade com mais capacidade de carga</td>
-	    <td id="td_moto">Estrada</td>
-	  </tr>
-	  
 	
-	  
-	  
-	</table>
-
-	
-			</div>
-			
-			
-		</div>
-		</div>
 
 		
 			
@@ -103,7 +98,7 @@
 	<script>
 td_nome.innerHTML = sessionStorage.NOME_USUARIO
 td_moto.innerHTML = sessionStorage.MOTO_USUARIO
-
+td_velocidade.innerHTML = sessionStorage.VELOCIDADE_USUARIO
 b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
 	  $(".nav").click(function(){
@@ -117,7 +112,7 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 	     $(".icons").css('margin-left', '-8px');
 	      $(".nav").css('display','none');
 	      $(".nav2").css('display','block');
-		  $(".box").css('width','85.4%');
+		  $(".box").css('width','142.7%');
 		  $(".main_grafico").css('width','100.0%');
 		  $(".main_grafico").css('height','40.0%');
 		  $(".grafico1").css('width','47vw');
@@ -136,7 +131,7 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 	     $(".icons").css('visibility', 'visible');
 	     $(".nav").css('display','block');
 	      $(".nav2").css('display','none');
-		  $(".box").css('width','85.0%');
+		  $(".box").css('width','142.7%');
 		  $(".main_grafico").css('width','100.0%');
 		  $(".grafico1").css('width','37vw');
 		  $(".grafico2").css('width','37vw');
@@ -151,7 +146,7 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     const data = {
         labels: [],
         datasets: [{
-            label: 'Moto ',
+            label: 'Motos mais votadas  ',
             backgroundColor: '#f7403b',
             borderColor: '#63247e',
             data: []
@@ -213,37 +208,41 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
 
 
-function graficos2(){}
-const labels2 = [
-        '12:00',
-        '13:00',
-        '14:00',
-        '15:00',
-        '16:00',
-        '17:00',
-    ];
-
-    const data2= {
-        labels: labels2,
+function graficos2(){
+const data2 = {
+        labels: [],
         datasets: [{
-            label: 'Passeios',
+            label: 'Velocidades mais votadas ',
             backgroundColor: '#f7403b',
-            borderColor: '#f7403b',
-            data: [23,55,12,45],
+            borderColor: '#63047e',
+            data: []
+			
         }
     ]
     };
-    const config2 = {
-        type: 'line',
+	  data2.labels.push(nome_velocidade1)
+      data2.datasets[0].data.push(qtd_votosV1)
+ 
+    if (qtd_votosV2 > 0) {
+      data2.labels.push(nome_velocidade2)
+      data2.datasets[0].data.push(qtd_votosV2)
+    }
+	if (qtd_votosV3 > 0) {
+      data2.labels.push(nome_velocidade3)
+      data2.datasets[0].data.push(qtd_votosV3)
+    }
+	const config2 = {
+        type: 'bar',
         data: data2,
         options: {}
     };
-	const CJS = new Chart(
+  
+    const CJS = new Chart(
         document.getElementById('CJS'),
         config2
     );
 	
-	
+}
 
 
 	    var qtd_votos1 = 0;
@@ -271,8 +270,12 @@ const labels2 = [
 		var nome_moto10 = "";
 
 
-		var qtd_agenda = 0
-        var nome_usuario = ""
+        var qtd_votosV1 = 0;
+        var qtd_votosV2 = 0;
+        var qtd_votosV3 = 0;
+        var nome_velocidade1 = "";
+        var nome_velocidade2 = "";
+        var nome_velocidade3 = "";
 
 		Chart.defaults.color = "#FFF"
 function votos(){
@@ -322,9 +325,6 @@ fetch("/usuarios/puxarMoto").then(function (resposta) {
                 nome_moto10 = resposta[9].nomeMoto;
             }
 
-
-
-
             graficos1()
         });
     } else {
@@ -336,15 +336,23 @@ fetch("/usuarios/puxarMoto").then(function (resposta) {
 
 }
 
-function agenda(){
-fetch("/usuarios/puxarAgenda").then(function (resposta) {
+function velocidade(){
+fetch("/usuarios/puxarVelocidade").then(function (resposta) {
     if (resposta.ok) {
 
         resposta.json().then(function (resposta) {
             console.log("Dados recebidos: ", JSON.stringify(resposta));
             var teste = resposta
-            qtd_agenda = resposta[0].qtdPasseios;
-            nome_usuario= resposta[0].nomeUsuario;
+            qtd_votosV1 = resposta[0].qtdVelocidade;
+            nome_velocidade1= resposta[0].nomeVelocidade;
+            if (resposta[1]) {
+                qtd_votosV2  = resposta[1].qtdVelocidade;
+                nome_velocidade2 = resposta[1].nomeVelocidade;
+            }
+            if (resposta[2]) {
+                qtd_votosV3  = resposta[2].qtdVelocidade;
+                nome_velocidade3 = resposta[2].nomeVelocidade;
+            }
 			graficos2()
         });
     } else {
