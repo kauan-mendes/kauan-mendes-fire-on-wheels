@@ -30,7 +30,7 @@
 
         <ul>
 
-         
+
             <li> <a href="dashboard.html"><i class="uil uil-angle-left-b"></i>Dashwheels</a></li>
             <li> <a href="curiosidades.html"><i class="uil uil-angle-left-b"></i>Curiosidades</a></li>
             <li> <a href="login.html"> Sair <i class="uil uil-signout"></i></a></li>
@@ -39,16 +39,17 @@
 
     </nav>
     </header>
- 
 
-    
+
+
 
     <div class="dd">
 
         <div class="avisos">
             <div class="container">
                 <div class="hello">
-                    <h3>Vamos agendar um passeio <span id="b_usuario">usuário</span>, esfriar a cabeça e conhecer pessoas novas é sempre bom!</h3>
+                    <h3>Vamos agendar um passeio <span id="b_usuario">usuário</span>, esfriar a cabeça e conhecer
+                        pessoas novas é sempre bom!</h3>
                 </div>
                 <h1>Agendar um passeio</h1>
                 <div class="div-form">
@@ -164,6 +165,15 @@
     }
 
     function deletar(idPasseio) {
+        // if (idUsuario != fk_usuarioHost) {
+        //     Swal.fire(
+        //         'Digitou certo?',
+        //         'Email ou senha invalido',
+        //         'error'
+        //     )
+        //     return false
+
+        // }
         console.log("Criar função de apagar post escolhido - ID" + idPasseio);
         fetch(`/avisos/deletar/${idPasseio}`, {
             method: "DELETE",

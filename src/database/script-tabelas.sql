@@ -47,11 +47,19 @@ FOREIGN KEY(fk_velocidade)REFERENCES velocidade (idVelocidade)
 
 INSERT INTO usuario VALUES
  (NULL,'Bruno',08532120,'Ferraz','Tanquinho','bruno@gmail.com','bruno123',1,1),
- (NULL,'Kauan',27235173,'Sao Matheus','Tanquinho','kauan@gmail.com','kauan123',1,2),
- (NULL,'Soares',02746127,'Tiradentes','Vl margarida','soares@gmail.com','soares123',2,3),
- (NULL,'Noleto',624123612,'Paulista','Jd tv','noleto@gmail.com','noleto123',3,2),
- (NULL,'Caxixi',02836127,'Osasco','Gianetti','caxixi@gmail.com','caxixi123',4,2),
- (NULL,'Wagner',02738128,'Tatuapé','Jd dourado','wagner@gmail.com','wagner123',1,2);
+ (NULL,'Kauan',27235173,'Sao Matheus','Tanquinho','kauan@gmail.com','kauan123',2,2),
+ (NULL,'Soares',02746127,'Tiradentes','Vl margarida','soares@gmail.com','soares123',3,3),
+ (NULL,'Noleto',624123612,'Paulista','Jd tv','noleto@gmail.com','noleto123',4,2),
+ (NULL,'Caxixi',02836127,'Osasco','Gianetti','caxixi@gmail.com','caxixi123',5,2),
+ (NULL,'Yucatan',27235173,'Sao Matheus','Tanquinho','kauan@gmail.com','yucatan123',6,2),
+ (NULL,'Tarifa',02746127,'Tiradentes','Vl margarida','soares@gmail.com','soares123',7,3),
+ (NULL,'Maryanna',6525242612,'Paulista','Jd tv','noleto@gmail.com','noleto123',8,2),
+ (NULL,'Diogo',8363563127,'Osasco','Gianetti','diogo@gmail.com','diogo123',9,2),
+ (NULL,'Andrew',341245267,'Osasco','Gianetti','andrew@gmail.com','andrew123',10,3),
+ (NULL,'Kawan',0242434327,'Osasco','Gianetti','kawan@gmail.com','kawan123',1,3),
+ (NULL,'Thiago',424324127,'Osasco','Gianetti','thiago@gmail.com','thiago123',1,3),
+ (NULL,'Manuel',02343242127,'Osasco','Gianetti','manuel@gmail.com','manuel123',5,2),
+ (NULL,'Wagner',014114128,'Tatuapé','Jd dourado','wagner@gmail.com','wagner123',5,2);
 
 
 CREATE TABLE passeio(
@@ -65,8 +73,14 @@ FOREIGN KEY(fk_usuarioHost)REFERENCES usuario(idUsuario)
 INSERT INTO passeio VALUES
 (NULL,'Passeio na paulista','Dia: 24/12/2003 Local:Av paulista',1),
 (NULL,'Passeio no centro','Dia: 12/06/2022 Local:Sptech',2),
-(NULL,'Passeio na zona leste','Dia: 15/06/2022 Local:Itaquera',3);
+(NULL,'Passeio na zona leste','Dia: 15/06/2022 Local:Itaquera',3),
+(NULL,'Passeio na zona norte','Dia: 18/07/2022 Local:Center norte',2);
 
+
+
+
+
+-- SELECTS
 
 SELECT 
 usuario.*, moto.nomeMoto 
@@ -91,16 +105,18 @@ ON a.fk_usuarioHost = u.idUsuario;
                 
                
             
-SELECT 
-nomeMoto, COUNT(nomeMoto)
-FROM
-moto
+select                             
+nomeMoto, COUNT(fk_moto)
+FROM moto
+JOIN usuario
+ON idMoto = fk_moto
 GROUP BY nomeMoto;
 
 SELECT 
-nomeVelocidade, COUNT(nomeVelocidade)
-FROM
-velocidade
+nomeVelocidade, COUNT(fk_velocidade)
+FROM velocidade
+JOIN usuario 
+ON idvelocidade = fk_velocidade
 GROUP BY nomeVelocidade;
 
 

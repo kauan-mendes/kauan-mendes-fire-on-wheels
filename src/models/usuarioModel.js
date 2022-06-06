@@ -40,9 +40,11 @@ function cadastrar(nome, cep, cidade, bairro, email, senha, moto, velocidade) {
 function puxarMoto() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao =` 
-    SELECT 
-nomeMoto, COUNT(nomeMoto) as qtdVotos
-FROM moto 
+    select                             
+nomeMoto, COUNT(fk_moto) as qtdVotos
+FROM moto
+JOIN usuario
+ON idMoto = fk_moto
 GROUP BY nomeMoto;
 
     `;
@@ -54,10 +56,11 @@ function puxarVelocidade() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao =` 
     SELECT 
-    nomeVelocidade, COUNT(nomeVelocidade) as qtdVelocidade
-    FROM
-    velocidade
-    GROUP BY nomeVelocidade;
+nomeVelocidade, COUNT(fk_velocidade) as qtdVelocidade
+FROM velocidade
+JOIN usuario 
+ON idvelocidade = fk_velocidade
+GROUP BY nomeVelocidade;
 
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);

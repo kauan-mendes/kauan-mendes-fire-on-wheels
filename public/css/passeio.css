@@ -3,11 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
-  background-color: #1b203d;
+  background-color: #08090e;
   font-family: "Exo 2", sans-serif;
-  
-  transition: 1s;
-  
+  background-image: url('https://s1.1zoom.me/b6353/461/Yamaha_2017_MT-07_Moto_Cage_Night_Moon_515846_1366x768.jpg');
+ 
+  background-repeat: no-repeat;
 
 }
 
@@ -127,8 +127,8 @@ label{
   outline: none;
  
   width: 100%;
-  border: 8px solid #b62525;
-  background-color: #b62525;
+  border: 8px solid #1b203d;
+  background-color: #1b203d;
   border-radius: 20px;
 }
 #titulo{
@@ -139,8 +139,8 @@ label{
   outline: none;
   height: 10%;
   border-radius: 20px;
-  border: 8px solid #b62525;
-  background-color: #b62525;
+  border: 8px solid #1b203d;
+  background-color: #1b203d;
  
   
 }
@@ -154,14 +154,14 @@ label{
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #b62525;
+  background-color: #1b203d;
   width: 120px;
   border-radius: 20px;
-  margin-left: 44%;
+  margin-left: 40%;
   transition: .3s;
 }
 .dd .avisos .div-form button:hover{
-  background-color: #1b203d;
+  background-color: #141a38;
 }
 
 .publicacao {
@@ -175,23 +175,23 @@ label{
   margin-top: 5%;
   padding: 13px;
   color: rgb(255, 255, 255);
-
+  
 }
 
 .dd {
+  
   display: flex;
   width: 54.6%;
-  border: #b62525 16px ridge;
   height: fit-content;
-  
-  background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(17px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.692);
+  backdrop-filter: blur(5px);
+  border-radius: 90px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 40.6);
   box-shadow: 8px 8px 22px 20px rgba(0, 0, 0, 0.427);
+
   position: relative;
-  top: -10;
-  left: 18%;
+  margin-top: 2%;
+  left: 23%;
   
 }
 .div-results .feed-container {
@@ -202,6 +202,7 @@ label{
   box-shadow: 8px 8px 22px 20px rgba(0, 0, 0, 0.427);
   border-radius: 5px;
   margin-bottom: 80px;
+  margin-left: 6%;
 }
 
 .hello {
@@ -210,14 +211,7 @@ label{
   display: flex;
   justify-content: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(17px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 40.6);
-  border-right: #b62525 12px ridge;
-  border-left: #b62525 12px ridge;
-  border-bottom: #b62525 12px ridge;
-  box-shadow: 8px 8px 22px 20px rgba(0, 0, 0, 0.427);
+
 }
 
 .hello h3 {
@@ -228,7 +222,7 @@ label{
 
 .hello h3 span {
   font-weight: 800;
-  color: #ff0000;
+  color: #b7dcff;
 }
 
 
@@ -387,7 +381,7 @@ input {
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #1b203d;
+  background-color: #000000;
 
   font-family: system-ui;
 }
