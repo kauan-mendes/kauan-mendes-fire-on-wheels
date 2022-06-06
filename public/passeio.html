@@ -156,7 +156,17 @@
 
     }
 
-    function editar(idPasseio) {
+    function editar(idPasseio,idUsuario) {
+        if(idUsuario != sessionStorage.ID_USUARIO){
+            Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Essa agenda não é sua',
+                    showConfirmButton: false,
+                    timer: 1200
+                })
+            return false
+        }
         sessionStorage.ID_POSTAGEM_EDITANDO = idPasseio;
         console.log("cliquei em editar - " + idPasseio);
         window.alert("Você será redirecionado à página de edição do aviso de id número: " + idPasseio);
@@ -164,16 +174,18 @@
 
     }
 
-    function deletar(idPasseio) {
-        // if (idUsuario != fk_usuarioHost) {
-        //     Swal.fire(
-        //         'Digitou certo?',
-        //         'Email ou senha invalido',
-        //         'error'
-        //     )
-        //     return false
+    function deletar(idPasseio,idUsuario) {
+        if(idUsuario != sessionStorage.ID_USUARIO){
+            Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Essa agenda não é sua',
+                    showConfirmButton: false,
+                    timer: 1200
+                })
 
-        // }
+            return false
+        }
         console.log("Criar função de apagar post escolhido - ID" + idPasseio);
         fetch(`/avisos/deletar/${idPasseio}`, {
             method: "DELETE",
@@ -255,12 +267,12 @@
 
                         btnEditar.className = "publicacao-btn-editar"
                         btnEditar.id = "btnEditar" + publicacao.idPasseio;
-                        btnEditar.setAttribute("onclick", `editar(${publicacao.idPasseio})`);
+                        btnEditar.setAttribute("onclick", `editar(${publicacao.idPasseio},${publicacao.idUsuario})`);
 
 
                         btnDeletar.className = "publicacao-btn-editar"
                         btnDeletar.id = "btnDeletar" + publicacao.idPasseio;
-                        btnDeletar.setAttribute("onclick", `deletar(${publicacao.idPasseio})`);
+                        btnDeletar.setAttribute("onclick", `deletar(${publicacao.idPasseio},${publicacao.idUsuario})`);
 
                         divPublicacao.appendChild(spanID);
                         divPublicacao.appendChild(spanNome);
