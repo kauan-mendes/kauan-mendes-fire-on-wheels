@@ -70,6 +70,7 @@ function cadastrar(req, res) {
     var senha = req.body.senhaServer;
     var moto = req.body.motoServer;
     var velocidade = req.body.velocidadeServer;
+    
 
 
 
@@ -84,6 +85,39 @@ function cadastrar(req, res) {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         usuarioModel.cadastrar(nome, cep, cidade, bairro, email, senha, moto, velocidade)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+function enviarFoto(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var foto = req.body.fotoServer;
+    var id = req.body.idFotoMotoServer;
+
+    
+
+
+
+    // Faça as validações dos valores
+    if (foto == undefined) {
+        res.status(400).send("Seu nome está undefined!");
+
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.enviarFoto(foto,id)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -133,6 +167,19 @@ function puxarVelocidade(req, res) {
             }
         );
 }
+function buscarFoto(req, res) {
+    usuarioModel.buscarFoto().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
 
 
 module.exports = {
@@ -141,5 +188,7 @@ module.exports = {
     listar,
     testar,
     puxarMoto,
-    puxarVelocidade
+    puxarVelocidade,
+    enviarFoto,
+    buscarFoto
 }

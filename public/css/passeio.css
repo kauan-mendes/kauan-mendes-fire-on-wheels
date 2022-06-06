@@ -6,7 +6,7 @@ body {
   background-color: #08090e;
   font-family: "Exo 2", sans-serif;
   background-image: url('https://s1.1zoom.me/b6353/461/Yamaha_2017_MT-07_Moto_Cage_Night_Moon_515846_1366x768.jpg');
- 
+ overflow-y: hidden;
   background-repeat: no-repeat;
 
 }
@@ -178,22 +178,49 @@ label{
   
 }
 
+.dd::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+/* cor de fundo do scroll */
+.dd::-webkit-scrollbar-track {
+  background: #201b2c34;
+  margin-top: 10%;
+}
+
+.dd::-webkit-scrollbar-thumb {
+  background: linear-gradient(72deg, #710d06 10%, #ff1919 99%);
+  border-radius: 12px;
+  /* roundness of the scroll thumb */
+  border: 1px solid #e5e5e5;
+}
+
 .dd {
   
   display: flex;
   width: 54.6%;
-  height: fit-content;
+  height: 537px;
   background: rgba(0, 0, 0, 0.692);
   backdrop-filter: blur(5px);
   border-radius: 90px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 40.6);
   box-shadow: 8px 8px 22px 20px rgba(0, 0, 0, 0.427);
-
+overflow-y: scroll;
   position: relative;
-  margin-top: 2%;
+  margin-top: 1%;
   left: 23%;
   
 }
+.publicacao-btn-editar{
+  background-color: #12143a;
+  color: white;
+  transition: 0.7s;
+}
+.publicacao-btn-editar:hover{
+  background-color: #606174;
+  color: rgb(0, 0, 0);
+}
+
 .div-results .feed-container {
   background: #00000083;
   backdrop-filter: blur(117px);

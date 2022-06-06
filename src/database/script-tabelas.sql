@@ -76,7 +76,12 @@ INSERT INTO passeio VALUES
 (NULL,'Passeio na zona leste','Dia: 15/06/2022 Local:Itaquera',3),
 (NULL,'Passeio na zona norte','Dia: 18/07/2022 Local:Center norte',2);
 
-
+ CREATE TABLE foto(
+ fk_usuario INT,
+ FOREIGN KEY (fk_usuario)REFERENCES usuario(idUsuario),
+ url VARCHAR(2000)
+ 
+ );
 
 
 
@@ -129,5 +134,10 @@ JOIN usuario
 ON idUsuario = fk_usuarioHost 
 GROUP BY fk_usuarioHost
 ORDER BY COUNT(id) desc;
+
+ SELECT usuario.nomeUsuario, foto.url 
+ FROM foto 
+ JOIN usuario 
+ ON idUsuario = fk_usuario;
 
 

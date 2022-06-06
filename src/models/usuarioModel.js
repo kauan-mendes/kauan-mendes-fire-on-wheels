@@ -67,10 +67,35 @@ GROUP BY nomeVelocidade;
     return database.executar(instrucao);
 }
 
+function enviarFoto(foto,id) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
+    var instrucao =` 
+    insert into foto values ('${id}','${foto}')  
+
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+function buscarFoto() {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
+    var instrucao =` 
+    SELECT usuario.nomeUsuario as nome, foto.url as foto 
+FROM foto 
+JOIN usuario 
+ON idUsuario = fk_usuario; 
+
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
     puxarMoto,
-    puxarVelocidade
+    puxarVelocidade,
+    enviarFoto,
+    buscarFoto
 };
+

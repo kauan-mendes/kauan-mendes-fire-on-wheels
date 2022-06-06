@@ -9,7 +9,7 @@
     <title>Passeio | Avisos</title>
 
 
-    <link rel="stylesheet" href="./css/passeio.css">
+   <link rel="stylesheet" href="curiosidades.css">
     <script src="../js/funcoes.js"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,7 +20,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
-<body onload="atualizarFeed() ">
+<body >
 
     <nav>
         <a href="index.html">
@@ -40,6 +40,10 @@
     </header>
  
 
+    <input id="link" >
+<button onclick="enviar()">Enviar</button>
+
+<div id="mostrar"></div>
     
 
 
@@ -49,3 +53,92 @@
 </body>
 
 </html>
+
+<script>
+    window.onload = buscarFoto()
+
+
+function enviar(){
+
+var fotoMotoVar = link.value
+var idFotoMotoVar = Number(sessionStorage.ID_USUARIO)
+
+fetch("/usuarios/enviarFoto", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                
+                fotoServer: fotoMotoVar,
+              idFotoMotoServer: idFotoMotoVar
+                
+
+                
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+
+
+                Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Cadastro realizado com sucesso!',
+  showConfirmButton: false,
+  timer: 1500
+})
+
+                setTimeout(() => {
+                    window.location = "curiosidades.html";
+                }, "2000")
+
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+}
+
+function buscarFoto(){
+
+    
+    fetch(`/usuarios/buscarFoto`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+for (var contador = resposta.length -1; contador >= 0; contador--){
+
+    mostrar.innerHTML += `<p>
+        Dono ${resposta[contador].nome}
+        </p>
+        
+        <img src="${resposta[contador].foto}"> <br>` 
+    
+
+
+}
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+}
+
+
+
+    
+</script>

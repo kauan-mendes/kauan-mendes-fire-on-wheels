@@ -160,7 +160,7 @@
         sessionStorage.ID_POSTAGEM_EDITANDO = idPasseio;
         console.log("cliquei em editar - " + idPasseio);
         window.alert("Você será redirecionado à página de edição do aviso de id número: " + idPasseio);
-        window.location = "/dashboard/edicao-aviso.html"
+        window.location = "editarPasseio.html"
 
     }
 
@@ -250,8 +250,12 @@
                         spanNome.className = "publicacao-nome";
                         spanTitulo.className = "publicacao-titulo";
                         divDescricao.className = "publicacao-descricao";
-
+                        btnDeletar.className = "button_deletar"
                         divButtons.className = "div-buttons"
+
+                        btnEditar.className = "publicacao-btn-editar"
+                        btnEditar.id = "btnEditar" + publicacao.idPasseio;
+                        btnEditar.setAttribute("onclick", `editar(${publicacao.idPasseio})`);
 
 
                         btnDeletar.className = "publicacao-btn-editar"
@@ -263,6 +267,7 @@
                         divPublicacao.appendChild(spanTitulo);
                         divPublicacao.appendChild(divDescricao);
                         divPublicacao.appendChild(divButtons);
+                        divButtons.appendChild(btnEditar);
                         divButtons.appendChild(btnDeletar);
                         feed.appendChild(divPublicacao);
                     }

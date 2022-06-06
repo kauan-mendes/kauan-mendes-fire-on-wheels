@@ -28,4 +28,18 @@ router.get("/puxarVelocidade", function (req, res) {
     usuarioController.puxarVelocidade(req, res);
 });
 
+router.post("/enviarFoto", function (req, res) {
+    usuarioController.enviarFoto(req, res);
+});
+
+router.post("/enviarFoto", function (req, res) {
+    usuarioController.enviarFoto(req, res);
+});
+
+router.get("/buscarFoto", function (req, res) {
+    usuarioController.buscarFoto(req, res);
+});
+
+
+
 module.exports = router;
