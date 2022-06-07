@@ -9,7 +9,7 @@
     <title>Passeio | Avisos</title>
 
 
-    <link rel="stylesheet" href="./css/curiosidades.css">
+    <link rel="stylesheet" href="./css/feed.css">
     <script src="../js/funcoes.js"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -39,8 +39,9 @@
     </nav>
     </header>
     <div class="mainbutton">
-    <input id="link" > <br>
-    <button onclick="enviar()">Publicar</button></div>
+        <h3> <span id="nome"></span> Poste as fotos das motos que você é apaixonado e veja o post dos outros!</h3> 
+        <h3>Insira o url de uma foto</h3> <input id="link" > <br>
+    <button   onclick="enviar()">Publicar</button></div>
  <div class="main">
 <div id="mostrar"></div>
 </div>
@@ -56,12 +57,23 @@
 <script>
     window.onload = buscarFoto()
 
+nome.innerHTML = sessionStorage.NOME_USUARIO
 
 function enviar(){
-
 var fotoMotoVar = link.value
 var idFotoMotoVar = Number(sessionStorage.ID_USUARIO)
+var linkimg = link.value
+ if(linkimg.length <= 10){
+    Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Insira uma url valida para publicar',
+                    showConfirmButton: false,
+                    timer: 1200
+                })
 
+                return false
+ }
 fetch("/usuarios/enviarFoto", {
             method: "POST",
             headers: {
@@ -91,7 +103,7 @@ fetch("/usuarios/enviarFoto", {
 })
 
                 setTimeout(() => {
-                    window.location = "curiosidades.html";
+                    window.location = "feedFotos.html";
                 }, "2000")
 
                 limparFormulario();
@@ -117,10 +129,10 @@ function buscarFoto(){
 
 for (var contador = resposta.length -1; contador >= 0; contador--){
 
-    mostrar.innerHTML += `<p class="textomain">
+    mostrar.innerHTML += `<div class="forr"> <p class="textomain">
         Publicado por ${resposta[contador].nome} </p>     
-        <img style="width: 500px;height:600px" src="${resposta[contador].foto}"> <br>` 
-    
+        <img style="width: 500px;height:600px" src="${resposta[contador].foto}"> </div>  <br> <br> <br> <br> ` 
+   
 
 
 }

@@ -1,7 +1,7 @@
 body {
   background-color: #08090e;
   font-family: "Exo 2", sans-serif;
-  background-image: url('https://s1.1zoom.me/b6353/461/Yamaha_2017_MT-07_Moto_Cage_Night_Moon_515846_1366x768.jpg');
+ 
  margin: 0;
   background-repeat: no-repeat;
 
@@ -69,6 +69,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .logo {
@@ -100,3 +101,35 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid #e5e5e5;
 }
 
+h3{
+  color: #e5e5e5;
+}
+
+button{
+  background-color: black;
+  border: #1b203d 2px solid;
+  color: #e5e5e5;
+  outline: none;
+  transition: all 1.1s;
+  cursor: pointer;
+  height: 30px;
+  width: 90px;
+}
+button:hover{
+  background-color: rgba(22, 20, 20, 0.74);
+  border: #1b203d 2px solid;
+  color: #e5e5e5;
+  cursor: pointer;
+  transform: scale(1.1);
+  
+}
+input{
+  border-radius: 10px;
+  outline: none;
+  padding: 5px;
+}
+
+.forr{
+  margin-top: 25%;
+  
+}
