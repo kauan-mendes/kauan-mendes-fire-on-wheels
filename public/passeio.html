@@ -52,7 +52,7 @@
                         pessoas novas é sempre bom!</h3>
                 </div>
                 <h1>Agendar um passeio</h1>
-                <div class="div-form">
+                <div id="texto" class="div-form">
                     <form id="form_postagem" method="post" onsubmit="return publicar()">
                         <label>
                             Título:
@@ -167,7 +167,9 @@
                     timer: 1200
                 })
             return false
+            
         }else{
+            sessionStorage.ID_POSTAGEM_EDITANDO = idPasseio;
             Swal.fire({
                     position: 'left',
                     icon: 'success',
