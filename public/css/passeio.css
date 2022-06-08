@@ -8,6 +8,7 @@ body {
   background-image: url('https://s1.1zoom.me/b6353/461/Yamaha_2017_MT-07_Moto_Cage_Night_Moon_515846_1366x768.jpg');
  overflow-y: hidden;
   background-repeat: no-repeat;
+  word-break: break-all;
 
 }
 
@@ -144,6 +145,7 @@ label{
   border: 8px solid #1b203d;
   background-color: #1b203d;
   color: white;
+  
  
   
 }
