@@ -83,6 +83,14 @@ INSERT INTO passeio VALUES
  
  );
 
+ INSERT INTO foto VALUES 
+ (2,'https://img.r7.com/images/moto-roubada-06042022095141898?dimensions=771x420&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&resize=771x420&crop=1057x576+97+0'),
+ (3,'https://img.r7.com/images/moto-roubada-07042022144514329?dimensions=299x417&&&&&&&&&&&&&&&&&&&&&&&&&&&resize=299x417&crop=534x744+18+217'),
+ (4,'https://cdn.autopapo.com.br/box/uploads/2020/10/27171016/voltz-evs-732x488.png'),
+ (5,'https://i.pinimg.com/originals/d2/4c/32/d24c328b31d653ca62b65c21bab0b37c.jpg'),
+ (11,'https://www.motonline.com.br/noticia/wp-content/uploads/2022/04/cropped-moto-eletrica-com-grande-autonomia-zero-sr-1.jpg'),
+ (12,'https://i.pinimg.com/736x/e4/9f/f0/e49ff0cb6dc43f46c570b83f5cedce2f.jpg');
+
 
 
 -- SELECTS
